@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {FaGithubAlt, FaTwitter, FaInstagram} from 'react-icons/lib/fa'
+import {FaGithubAlt, FaTwitter} from 'react-icons/lib/fa'
 import {MdMessage, MdEmail} from 'react-icons/lib/md'
 import styled from 'styled-components'
 
@@ -13,7 +13,11 @@ const Container = styled.div`
 
 const UserIcon = styled.a`
   color: white;
-  padding-left: 25px;
+  margin-left: 25px;
+  
+  &:hover {
+    color: rgba(0, 0, 0, .5);
+  }
 `
 
 const iconStyle = {

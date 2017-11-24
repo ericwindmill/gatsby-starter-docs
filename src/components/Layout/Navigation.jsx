@@ -6,6 +6,7 @@ import UserLinks from '../UserLinks'
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  background: transparent;
 `
 
 const linkStyles = {
