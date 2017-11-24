@@ -6,10 +6,11 @@ import SEO from "../components/SEO/SEO"
 import config from "../../data/SiteConfig"
 
 import MainHeader from '../components/Layout/Header'
-import Body from '../components/Layout/Body'
-import Footer from '../components/Layout/Footer'
+import PostListing from '../components/PostListing/PostListing'
 
-
+const BodyContainer = styled.div`
+  padding: ${props => props.theme.sitePadding};
+`
 
 class Index extends React.Component {
   render() {
@@ -22,8 +23,9 @@ class Index extends React.Component {
           <MainHeader
             siteTitle={config.siteTitle}
           />
-          <Body />
-          <Footer />
+          <BodyContainer>
+            <PostListing postEdges={postEdges} />
+          </BodyContainer>
         </main>
       </div>
     );

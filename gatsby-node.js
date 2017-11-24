@@ -2,8 +2,8 @@ const path = require("path");
 const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
+  const {createNodeField} = boundActionCreators;
   let slug;
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
@@ -26,15 +26,16 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     } else {
       slug = `/${parsedFilePath.dir}/`;
     }
-    createNodeField({ node, name: "slug", value: slug });
+    createNodeField({node, name: "slug", value: slug});
   }
 };
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({graphql, boundActionCreators}) => {
+  const {createPage} = boundActionCreators;
 
   return new Promise((resolve, reject) => {
     const postPage = path.resolve("src/templates/post.jsx");
+    const lessonPage = path.resolve("src/templates/lesson.jsx")
     const tagPage = path.resolve("src/templates/tag.jsx");
     const categoryPage = path.resolve("src/templates/category.jsx");
     resolve(
@@ -47,6 +48,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 frontmatter {
                   tags
                   category
+                  type
                 }
                 fields {
                   slug
@@ -76,14 +78,24 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             categorySet.add(edge.node.frontmatter.category);
           }
 
-          createPage({
-            path: edge.node.fields.slug,
-            component: postPage,
-            context: {
-              slug: edge.node.fields.slug
-            }
-          });
-        });
+          if (edge.node.frontmatter.type === 'post') {
+            createPage({
+              path: edge.node.fields.slug,
+              component: postPage,
+              context: {
+                slug: edge.node.fields.slug
+              }
+            })
+          } else {
+            createPage({
+              path: edge.node.fields.slug,
+              component: lessonPage,
+              context: {
+                slug: edge.node.fields.slug
+              }
+            })
+          }
+        })
 
         const tagList = Array.from(tagSet);
         tagList.forEach(tag => {
@@ -111,7 +123,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   });
 };
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
+exports.modifyWebpackConfig = ({config, stage}) => {
   if (stage === "build-javascript") {
     config.plugin("Lodash", webpackLodashPlugin, null);
   }

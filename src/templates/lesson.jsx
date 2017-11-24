@@ -3,7 +3,6 @@ import Helmet from "react-helmet";
 import styled from "styled-components"
 
 import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
@@ -16,7 +15,7 @@ const BodyContainer = styled.div`
   padding: ${props => props.theme.sitePadding};
 `
 
-export default class PostTemplate extends React.Component {
+export default class LessonTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.markdownRemark;
@@ -43,7 +42,6 @@ export default class PostTemplate extends React.Component {
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
           <UserInfo config={config} />
-          <Disqus postNode={postNode} />
         </BodyContainer>
       </div>
     );
@@ -52,7 +50,7 @@ export default class PostTemplate extends React.Component {
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query LessonBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead

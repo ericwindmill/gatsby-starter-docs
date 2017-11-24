@@ -1,11 +1,13 @@
 ---
-title: "Lesson One"
+title: "Post One"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
 category: "tech"
-type: "lesson"
+type: "post"
 tags:
     - programming
     - stuff
     - other
 ---
+
+# Post One!!
