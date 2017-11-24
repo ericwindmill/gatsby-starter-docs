@@ -8,14 +8,19 @@ const NavContainer = styled.div`
   justify-content: space-between;
 `
 
+const linkStyles = {
+  fontSize: '2rem',
+  paddingRight: '10px',
+}
+
 class MainHeader extends React.Component {
   render() {
     return (
       <NavContainer>
         <section>
-          <Link to='#'> Link 1 </Link>
-          <Link to='#'> Link 2 </Link>
-          <Link to='#'> Link 3 </Link>
+          <Link to='/about' style={ linkStyles } > About </Link>
+          <Link to='#' style={ linkStyles } > Link </Link>
+          <Link to='#' style={ linkStyles } > Link </Link>
         </section>
         <UserLinks />
       </NavContainer>

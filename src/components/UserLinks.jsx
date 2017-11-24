@@ -12,12 +12,13 @@ const Container = styled.div`
 `
 
 const UserIcon = styled.a`
-  color: red;
+  color: white;
+  padding-left: 25px;
 `
 
 const iconStyle = {
-  width: '25px',
-  height: '25px',
+  width: '20px',
+  height: '20px',
 }
 
 class UserLinks extends Component {
