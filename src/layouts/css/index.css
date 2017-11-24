@@ -1,0 +1,22 @@
+/*resets*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Styles */
+
+h1 {
+    font-size: 4rem;
+}
+
