@@ -3,27 +3,28 @@ import styled from 'styled-components'
 import Navigation from './Navigation'
 
 class MainHeader extends React.Component {
-
   getHeader() {
-    if (this.props.location.pathname !== undefined
-        && this.props.location.pathname === '/') {
-      return(
-        <IndexHeadContainer>
-          <Navigation />
-          <Hero>
-            <img src={this.props.logo} width='150px' />
-            <h1>{this.props.siteTitle}</h1>
-            <h4>{this.props.siteDescription}</h4>
-          </Hero>
-        </IndexHeadContainer>
-      )
-    } else {
-      return(
-        <SiteContainer>
-          <Navigation />
-        </SiteContainer>
-      )
+    if (this.props.location) {
+      if (this.props.location.pathname === '/') {
+        return (
+          <IndexHeadContainer>
+            <Navigation />
+            <Hero>
+              <img src={this.props.logo} width='150px' />
+              <h1>{this.props.siteTitle}</h1>
+              <h4>{this.props.siteDescription}</h4>
+            </Hero>
+          </IndexHeadContainer>
+        )
+      } else {
+        return (
+          <SiteContainer>
+            <Navigation />
+          </SiteContainer>
+        )
+      }
     }
+    return <div></div>
   }
 
   render() {
