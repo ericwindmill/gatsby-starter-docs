@@ -8,8 +8,12 @@ const IndexHeadContainer = styled.div`
 `
 
 const SiteContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: ${props => props.theme.brand};
-  padding: ${props => props.theme.sitePadding};
+  height: 100%;
+  padding: 0 25px;
 `
 
 class MainHeader extends React.Component {

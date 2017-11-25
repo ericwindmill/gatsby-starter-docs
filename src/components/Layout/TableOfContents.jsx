@@ -6,10 +6,6 @@ import styled from 'styled-components'
 // This class should not be used for listing posts, but for chapter based Docs. See PostListing for that.
 // You'll also need to add your chapters to siteConfig
 
-const TableOfContentsContainer = styled.div`
-  background: ${props => props.theme.lightGrey};
-`
-
 class TableOfContents extends React.Component {
   buildNodes() {
     const {posts} = this.props
@@ -47,23 +43,27 @@ class TableOfContents extends React.Component {
     const listItems = []
     const chapterTitles = this.props.chapterTitles
     postNodeChapters.forEach((chapter, idx) => {
-      listItems.push(
-        <li>
-          <h2>
-            {chapterTitles[idx]}
-          </h2>
-        </li>
-      )
+      const chapterLessons = []
       chapter.forEach(node => {
-        listItems.push(
+        chapterLessons.push(
           <Link to={node.path}>
-            <li>
-              <p>{node.chapter}.{node.lessonNumber}</p>
-              <h2>{node.title}</h2>
+            <li className='lessonDetail'>
+              <span>{node.chapter}.{node.lessonNumber} &nbsp;</span>
+              <h3>{node.title}</h3>
             </li>
           </Link>
         )
       })
+      listItems.push(
+        <li className='chapter'>
+          <h2 className='tocHeading'>
+            {chapterTitles[idx].toUpperCase()}
+          </h2>
+          <ul className='chapterItems'>
+            {chapterLessons}
+          </ul>
+        </li>
+      )
     })
     return listItems
   }
@@ -78,6 +78,29 @@ class TableOfContents extends React.Component {
     )
   }
 }
+
+const TableOfContentsContainer = styled.div`
+
+  padding: ${props => props.theme.sitePadding};
+
+  & > ul, .chapterItems {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .chapter {
+  margin-bottom: 15px;
+  }
+ 
+  
+  p, h3 {
+    display: inline-block;
+  }
+  
+  .tocHeading {
+     padding-bottom: 15px;
+  }
+`
 
 export default TableOfContents
 

@@ -9,15 +9,40 @@ html {
     font-size: 10px;
 }
 
-body {
+body,
+h1, h2, h3,
+p, a,
+li, ul {
     margin: 0;
     padding: 0;
 }
 
 /* Base Styles */
 
+* {
+    font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+
 h1 {
     font-size: 4rem;
+    line-height: 1.87;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.87;
+}
+
+h3 {
+    font-size: 1.8rem;
+    line-height: 1.87;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.87;
+    padding-bottom: 20px;
 }
 
 a {

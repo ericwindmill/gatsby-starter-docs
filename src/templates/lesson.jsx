@@ -7,31 +7,6 @@ import SiteHeader from '../components/Layout/Header'
 import config from "../../data/SiteConfig"
 import TableOfContents from "../components/Layout/TableOfContents";
 
-
-
-const BodyGrid = styled.div`
-  display: grid;
-  grid-template-rows: 75px 1fr;
-  grid-template-columns: 250px 1fr;
-`
-
-const BodyContainer = styled.div`
-  padding: ${props => props.theme.sitePadding};
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-`
-
-const HeaderContainer = styled.div`
-  grid-column: 1 / 3;
-  grid-row: 1 / 2;
-`
-
-const ToCContainer = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-`
-
-
 export default class LessonTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
@@ -71,6 +46,38 @@ export default class LessonTemplate extends React.Component {
     );
   }
 }
+
+const BodyGrid = styled.div`
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 65px 1fr;
+  grid-template-columns: 300px 1fr;
+`
+
+const BodyContainer = styled.div`
+  padding: ${props => props.theme.sitePadding};
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  overflow: scroll;
+  max-width: ${props => props.theme.contentWidthLaptop};
+  justify-self: center;
+  
+  & > h1 {
+    color: ${props => props.theme.accentDark};
+  }
+`
+
+const HeaderContainer = styled.div`
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+`
+
+const ToCContainer = styled.div`
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background: ${props => props.theme.lightGrey};
+  overflow: scroll;
+`
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
