@@ -44,7 +44,7 @@
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
                   <first_editor relative-caret-position="400">
-                    <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+                    <caret line="20" column="62" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
                     <folding />
                   </first_editor>
                   <second_editor />
@@ -258,12 +258,12 @@
       <workItem from="1511027113597" duration="1708000" />
       <workItem from="1511031420157" duration="5466000" />
       <workItem from="1511542510817" duration="12203000" />
-      <workItem from="1511612028382" duration="20706000" />
+      <workItem from="1511612028382" duration="20735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40290000" />
+    <option name="totallyTimeSpent" value="40319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -4791,7 +4791,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="400">
-            <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+            <caret line="20" column="62" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
             <folding />
           </first_editor>
           <second_editor />
