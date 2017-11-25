@@ -4,7 +4,7 @@ const theme = {
   accent: '#ADD2EB',
   accentDark: "#35495E",
   lightGrey: '#F6F6F6',
-  darkGrey: '#727F80',
+  darkGrey: '#91a2a3',
   ink: 'black',
   errorRed: '#FF6666',
   codeEditBlue: '#2973b7',

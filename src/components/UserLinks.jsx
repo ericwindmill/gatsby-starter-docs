@@ -9,15 +9,18 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     max-width: 100%;
+    
 `
 
 const UserIcon = styled.a`
-  color: white;
   margin-left: 25px;
-  
+  color: white;
   &:hover {
-    color: rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .2);
+    border-bottom: none;
   }
+  
+  
 `
 
 const iconStyle = {

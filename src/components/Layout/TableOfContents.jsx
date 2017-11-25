@@ -46,19 +46,23 @@ class TableOfContents extends React.Component {
       const chapterLessons = []
       chapter.forEach(node => {
         chapterLessons.push(
-          <Link to={node.path}>
-            <li className='lessonDetail'>
-              <span>{node.chapter}.{node.lessonNumber} &nbsp;</span>
-              <h3>{node.title}</h3>
-            </li>
-          </Link>
+          <LessonContainer>
+            <Link to={node.path}>
+              <li>
+                <span>
+                  <p>{node.chapter}.{node.lessonNumber} &nbsp;</p>
+                  <h6>{node.title}</h6>
+                </span>
+              </li>
+            </Link>
+          </LessonContainer>
         )
       })
       listItems.push(
         <li className='chapter'>
-          <h2 className='tocHeading'>
+          <h5 className='tocHeading'>
             {chapterTitles[idx].toUpperCase()}
-          </h2>
+          </h5>
           <ul className='chapterItems'>
             {chapterLessons}
           </ul>
@@ -80,28 +84,42 @@ class TableOfContents extends React.Component {
 }
 
 const TableOfContentsContainer = styled.div`
-
   padding: ${props => props.theme.sitePadding};
 
   & > ul, .chapterItems {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
   
-  .chapter {
-  margin-bottom: 15px;
-  }
- 
-  
-  p, h3 {
+  p, h6 {
     display: inline-block;
     font-weight: 200;
+    margin: 0;
   }
   
   .tocHeading {
-     padding-bottom: 15px;
      font-weight: 200;
-     color: ${props => props.theme.brand}
+     color: ${props => props.theme.brand};
+     margin-bottom: 10px;
+  }
+`
+
+const LessonContainer = styled.div`
+  h6, p {
+    color: black;
+    margin: 0;
+    line-height: 1.5;
+  }
+  li {
+    margin: 0;
+  }
+  &:hover {
+    li {
+      span {
+        border-bottom: 1px solid black;
+      }
+    }
   }
 `
 
