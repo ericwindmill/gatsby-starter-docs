@@ -3,8 +3,10 @@ import styled from 'styled-components'
 import Navigation from './Navigation'
 
 class MainHeader extends React.Component {
-  getHeader () {
-    if (this.props.location.pathname === '/') {
+
+  getHeader() {
+    if (this.props.location.pathname !== undefined
+        && this.props.location.pathname === '/') {
       return(
         <IndexHeadContainer>
           <Navigation />
@@ -16,18 +18,16 @@ class MainHeader extends React.Component {
         </IndexHeadContainer>
       )
     } else {
-     return(
-       <SiteContainer>
-         <Navigation />
-       </SiteContainer>
-     )
+      return(
+        <SiteContainer>
+          <Navigation />
+        </SiteContainer>
+      )
     }
   }
 
   render() {
-    return(
-        this.getHeader()
-    )
+    return this.getHeader()
   }
 }
 
