@@ -11,8 +11,9 @@ const NavContainer = styled.div`
 `
 
 const linkStyles = {
-  fontSize: '2rem',
+  fontSize: '1.6rem',
   paddingRight: '10px',
+  fontWeight: '200'
 }
 
 class Navigation extends React.Component {
@@ -21,9 +22,9 @@ class Navigation extends React.Component {
     return (
       <NavContainer>
         <section>
-          <Link to='/' style={ linkStyles } > Home </Link>
-          <Link to='#' style={ linkStyles } > Link </Link>
-          <Link to='#' style={ linkStyles } > Link </Link>
+          <Link to='/' style={ linkStyles } > HOME </Link>
+          <Link to='/lesson-one' style={ linkStyles } > DOCS </Link>
+          <Link to='/about' style={ linkStyles } > ABOUT </Link>
         </section>
         <UserLinks />
       </NavContainer>

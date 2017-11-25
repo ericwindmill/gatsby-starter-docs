@@ -36,10 +36,12 @@ export default class LessonTemplate extends React.Component {
             />
           </ToCContainer>
           <BodyContainer>
-            <h1>
-              {post.title}
-            </h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <div>
+              <h1>
+                {post.title}
+              </h1>
+              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            </div>
           </BodyContainer>
         </BodyGrid>
       </div>
@@ -50,17 +52,22 @@ export default class LessonTemplate extends React.Component {
 const BodyGrid = styled.div`
   height: 100vh;
   display: grid;
-  grid-template-rows: 65px 1fr;
+  grid-template-rows: 75px 1fr;
   grid-template-columns: 300px 1fr;
 `
 
 const BodyContainer = styled.div`
-  padding: ${props => props.theme.sitePadding};
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   overflow: scroll;
-  max-width: ${props => props.theme.contentWidthLaptop};
   justify-self: center;
+  width: 100%;
+  padding: ${props => props.theme.sitePadding};
+  
+  & > div {
+    max-width: ${props => props.theme.contentWidthLaptop};
+    margin: auto;
+  }
   
   & > h1 {
     color: ${props => props.theme.accentDark};
@@ -70,6 +77,7 @@ const BodyContainer = styled.div`
 const HeaderContainer = styled.div`
   grid-column: 1 / 3;
   grid-row: 1 / 2;
+  z-index: 2;
 `
 
 const ToCContainer = styled.div`

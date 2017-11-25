@@ -4,15 +4,11 @@ import styled from "styled-components"
 
 import SEO from "../components/SEO/SEO"
 import config from "../../data/SiteConfig"
-
 import MainHeader from '../components/Layout/Header'
-import PostListing from '../components/PostListing/PostListing'
-
-const BodyContainer = styled.div`
-  padding: ${props => props.theme.sitePadding};
-`
+import CtaButton from '../components/CtaButton'
 
 class Index extends React.Component {
+
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
@@ -22,10 +18,14 @@ class Index extends React.Component {
         <main>
           <MainHeader
             siteTitle={config.siteTitle}
+            siteDescription={config.siteDescription}
             location={this.props.location}
+            logo={config.siteLogo}
           />
           <BodyContainer>
-            <PostListing postEdges={postEdges} />
+            <h2>A Gatsby Template for Content</h2>
+            <p>Made for modern documentation sites. Table of Contents automatically generated from markdown files. </p>
+            <CtaButton to={'/lesson-one'}>See Your First Post</CtaButton>
           </BodyContainer>
         </main>
       </div>
@@ -34,6 +34,13 @@ class Index extends React.Component {
 }
 
 export default Index;
+
+const BodyContainer = styled.div`
+  padding: ${props => props.theme.sitePadding};
+  max-width: ${props => props.theme.contentWidthLaptop};
+  margin: 0 auto;
+`
+
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`

@@ -95,10 +95,13 @@ const TableOfContentsContainer = styled.div`
   
   p, h3 {
     display: inline-block;
+    font-weight: 200;
   }
   
   .tocHeading {
      padding-bottom: 15px;
+     font-weight: 200;
+     color: ${props => props.theme.brand}
   }
 `
 

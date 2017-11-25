@@ -19,9 +19,16 @@ li, ul {
 
 /* Base Styles */
 
-* {
+body,
+h1, h2, h3,
+p, a,
+li, ul {
     font-family: 'Avenir', 'Helvetica Neue', sans-serif;
     font-weight: 400;
+}
+
+pre, code {
+    font-family: 'Space Mono', monospace;
 }
 
 h1 {
@@ -42,7 +49,7 @@ h3 {
 p {
     font-size: 1.6rem;
     line-height: 1.87;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 a {

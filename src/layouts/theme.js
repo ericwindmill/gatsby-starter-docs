@@ -11,7 +11,7 @@ const theme = {
   codeEditGreen: '#42b983',
 
   // content width:
-  contentWidthLaptop: '900px',
+  contentWidthLaptop: '850px',
   sitePadding: "25px",
 
 }

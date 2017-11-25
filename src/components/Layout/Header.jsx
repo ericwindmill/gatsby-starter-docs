@@ -8,10 +8,10 @@ class MainHeader extends React.Component {
       return(
         <IndexHeadContainer>
           <Navigation />
-
           <Hero>
+            <img src={this.props.logo} width='150px' />
             <h1>{this.props.siteTitle}</h1>
-
+            <h2>{this.props.siteDescription}</h2>
           </Hero>
         </IndexHeadContainer>
       )
@@ -34,6 +34,7 @@ class MainHeader extends React.Component {
 const IndexHeadContainer = styled.div`
   background: ${props => props.theme.brand};
   padding: ${props => props.theme.sitePadding};
+  text-align: center;
 `
 
 const SiteContainer = styled.div`
@@ -42,11 +43,11 @@ const SiteContainer = styled.div`
   justify-content: space-between;
   background: ${props => props.theme.brand};
   height: 100%;
-  padding: 0 25px;
+  padding:  25px;
 `
 
 const Hero = styled.div`
-  padding: 50px;
+  padding: 50px 0;
   & > h1 {
     font-weight: 600;  
   }
