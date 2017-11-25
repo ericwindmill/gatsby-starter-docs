@@ -11,7 +11,7 @@ class MainHeader extends React.Component {
           <Hero>
             <img src={this.props.logo} width='150px' />
             <h1>{this.props.siteTitle}</h1>
-            <h2>{this.props.siteDescription}</h2>
+            <h4>{this.props.siteDescription}</h4>
           </Hero>
         </IndexHeadContainer>
       )
