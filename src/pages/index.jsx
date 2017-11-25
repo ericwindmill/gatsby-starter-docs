@@ -22,6 +22,7 @@ class Index extends React.Component {
         <main>
           <MainHeader
             siteTitle={config.siteTitle}
+            location={this.props.location}
           />
           <BodyContainer>
             <PostListing postEdges={postEdges} />
@@ -41,7 +42,7 @@ export const pageQuery = graphql`
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
-      edges {
+      edges { 
         node {
           fields {
             slug

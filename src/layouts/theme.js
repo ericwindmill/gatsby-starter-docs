@@ -12,7 +12,7 @@ const theme = {
 
   // content width:
   contentWidthLaptop: '900px',
-  sitePadding: "50px",
+  sitePadding: "25px",
 
 }
 

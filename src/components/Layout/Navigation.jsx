@@ -6,7 +6,7 @@ import UserLinks from '../UserLinks'
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  background: transparent;
+  background: ${props => props.theme.brand};
 `
 
 const linkStyles = {
@@ -14,12 +14,13 @@ const linkStyles = {
   paddingRight: '10px',
 }
 
-class MainHeader extends React.Component {
+class Navigation extends React.Component {
+
   render() {
     return (
       <NavContainer>
         <section>
-          <Link to='/about' style={ linkStyles } > About </Link>
+          <Link to='/' style={ linkStyles } > Home </Link>
           <Link to='#' style={ linkStyles } > Link </Link>
           <Link to='#' style={ linkStyles } > Link </Link>
         </section>
@@ -29,4 +30,4 @@ class MainHeader extends React.Component {
   }
 }
 
-export default MainHeader
+export default Navigation
