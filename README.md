@@ -14,6 +14,13 @@ This template provides everything but the content. You could just write all your
 
 ## Features
 
+<div align="center">
+    <img src="static/screen-shot-v0-1.png" alt="Logo" width='600px' />
+</div>
+<div align="center">
+    <img src="static/screen-shot-v0-2.png" alt="Logo" width='600px' />
+</div>
+
 ### New Features
 
 * Basic UI
