@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de849394-2008-46b0-9148-53273cdb204e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Layout/Header.jsx" afterPath="$PROJECT_DIR$/src/components/Layout/Header.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,15 +25,15 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="about.jsx" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/pages/about.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                    <marker date="1511638648000" expanded="true" signature="347:396" ph="{...}" />
-                  </folding>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="240">
+                    <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+                    <folding />
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
             </entry>
@@ -45,15 +45,15 @@
           <file leaf-file-name="Header.jsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/Layout/Header.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+                <state relative-caret-position="-154">
+                  <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
-                    <marker date="1511638835000" expanded="true" signature="806:922" ph="{...}" />
-                    <marker date="1511638835000" expanded="true" signature="958:1112" ph="{...}" />
-                    <marker date="1511638835000" expanded="true" signature="1139:1198" ph="{...}" />
-                    <marker date="1511638835000" expanded="true" signature="1168:1197" ph="{...}" />
-                    <marker date="1511638835000" expanded="true" signature="1197:1198" ph="{...}" />
+                    <marker date="1511639316000" expanded="true" signature="806:922" ph="{...}" />
+                    <marker date="1511639316000" expanded="true" signature="958:1112" ph="{...}" />
+                    <marker date="1511639316000" expanded="true" signature="1139:1198" ph="{...}" />
+                    <marker date="1511639316000" expanded="true" signature="1168:1197" ph="{...}" />
+                    <marker date="1511639316000" expanded="true" signature="1197:1198" ph="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -115,10 +115,10 @@
         <option value="$PROJECT_DIR$/src/components/CtaButton.jsx" />
         <option value="$PROJECT_DIR$/data/SiteConfig.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/templates/lesson.jsx" />
         <option value="$PROJECT_DIR$/src/pages/about.jsx" />
         <option value="$PROJECT_DIR$/src/components/Layout/Header.jsx" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -266,12 +266,12 @@
       <workItem from="1511027113597" duration="1708000" />
       <workItem from="1511031420157" duration="5466000" />
       <workItem from="1511542510817" duration="12203000" />
-      <workItem from="1511612028382" duration="22558000" />
+      <workItem from="1511612028382" duration="23162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42142000" />
+    <option name="totallyTimeSpent" value="42746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -399,11 +399,11 @@
           <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1511638835000" expanded="true" signature="806:922" ph="{...}" />
-            <marker date="1511638835000" expanded="true" signature="958:1112" ph="{...}" />
-            <marker date="1511638835000" expanded="true" signature="1139:1198" ph="{...}" />
-            <marker date="1511638835000" expanded="true" signature="1168:1197" ph="{...}" />
-            <marker date="1511638835000" expanded="true" signature="1197:1198" ph="{...}" />
+            <marker date="1511639316000" expanded="true" signature="806:922" ph="{...}" />
+            <marker date="1511639316000" expanded="true" signature="958:1112" ph="{...}" />
+            <marker date="1511639316000" expanded="true" signature="1139:1198" ph="{...}" />
+            <marker date="1511639316000" expanded="true" signature="1168:1197" ph="{...}" />
+            <marker date="1511639316000" expanded="true" signature="1197:1198" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -4619,17 +4619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="400">
-            <caret line="20" column="62" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -4772,29 +4761,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/about.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/Layout/Header.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state relative-caret-position="-154">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1511638648000" expanded="true" signature="347:396" ph="{...}" />
+            <marker date="1511639316000" expanded="true" signature="806:922" ph="{...}" />
+            <marker date="1511639316000" expanded="true" signature="958:1112" ph="{...}" />
+            <marker date="1511639316000" expanded="true" signature="1139:1198" ph="{...}" />
+            <marker date="1511639316000" expanded="true" signature="1168:1197" ph="{...}" />
+            <marker date="1511639316000" expanded="true" signature="1197:1198" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Layout/Header.jsx">
+    <entry file="file://$PROJECT_DIR$/src/pages/about.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="460">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <marker date="1511638835000" expanded="true" signature="806:922" ph="{...}" />
-            <marker date="1511638835000" expanded="true" signature="958:1112" ph="{...}" />
-            <marker date="1511638835000" expanded="true" signature="1139:1198" ph="{...}" />
-            <marker date="1511638835000" expanded="true" signature="1168:1197" ph="{...}" />
-            <marker date="1511638835000" expanded="true" signature="1197:1198" ph="{...}" />
+            <marker date="1511638648000" expanded="true" signature="7:312" ph="..." />
+            <marker date="1511638648000" expanded="true" signature="347:396" ph="{...}" />
+            <marker date="1511638648000" expanded="true" signature="439:889" ph="{...}" />
+            <marker date="1511638648000" expanded="true" signature="452:887" ph="{...}" />
+            <marker date="1511638648000" expanded="true" signature="473:876" ph="&lt;div/&gt;" />
+            <marker date="1511638648000" expanded="true" signature="559:863" ph="&lt;main/&gt;" />
+            <marker date="1511638648000" expanded="true" signature="576:772" ph="&lt;MainHeader/&gt;" />
+            <marker date="1511638648000" expanded="true" signature="783:847" ph="&lt;BodyContainer/&gt;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="240">
+            <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
