@@ -57,3 +57,5 @@ public/
 
 # Bundle stats
 bundle-stats.json
+
+.idea/workspace.xml
