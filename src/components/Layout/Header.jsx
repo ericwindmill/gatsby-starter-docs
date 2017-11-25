@@ -2,27 +2,17 @@ import React from "react"
 import styled from 'styled-components'
 import Navigation from './Navigation'
 
-const IndexHeadContainer = styled.div`
-  background: ${props => props.theme.brand};
-  padding: ${props => props.theme.sitePadding};
-`
-
-const SiteContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: ${props => props.theme.brand};
-  height: 100%;
-  padding: 0 25px;
-`
-
 class MainHeader extends React.Component {
   getHeader () {
     if (this.props.location.pathname === '/') {
       return(
         <IndexHeadContainer>
           <Navigation />
-          <h1>{this.props.siteTitle}</h1>
+
+          <Hero>
+            <h1>{this.props.siteTitle}</h1>
+
+          </Hero>
         </IndexHeadContainer>
       )
     } else {
@@ -41,4 +31,27 @@ class MainHeader extends React.Component {
   }
 }
 
+const IndexHeadContainer = styled.div`
+  background: ${props => props.theme.brand};
+  padding: ${props => props.theme.sitePadding};
+`
+
+const SiteContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: ${props => props.theme.brand};
+  height: 100%;
+  padding: 0 25px;
+`
+
+const Hero = styled.div`
+  padding: 50px;
+  & > h1 {
+    font-weight: 600;  
+  }
+`
+
 export default MainHeader
+
+
