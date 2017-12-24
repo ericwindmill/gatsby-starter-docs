@@ -54,6 +54,12 @@ const BodyGrid = styled.div`
   display: grid;
   grid-template-rows: 75px 1fr;
   grid-template-columns: 300px 1fr;
+  
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+  }
 `
 
 const BodyContainer = styled.div`
@@ -63,6 +69,9 @@ const BodyContainer = styled.div`
   justify-self: center;
   width: 100%;
   padding: ${props => props.theme.sitePadding};
+  @media screen and (max-width: 600px) {
+    order: 2;
+  }
   
   & > div {
     max-width: ${props => props.theme.contentWidthLaptop};
@@ -78,6 +87,9 @@ const HeaderContainer = styled.div`
   grid-column: 1 / 3;
   grid-row: 1 / 2;
   z-index: 2;
+   @media screen and (max-width: 600px) {
+    order: 1;
+  }
 `
 
 const ToCContainer = styled.div`
@@ -85,6 +97,10 @@ const ToCContainer = styled.div`
   grid-row: 2 / 3;
   background: ${props => props.theme.lightGrey};
   overflow: scroll;
+   @media screen and (max-width: 600px) {
+    order: 3;
+    overflow: inherit;
+  }
 `
 
 /* eslint no-undef: "off"*/

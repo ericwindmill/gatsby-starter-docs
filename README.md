@@ -32,6 +32,10 @@ This template provides everything but the content. You could just write all your
 * Configured to auto generate documentation 'Table of Contents' - you just need to follow the file frontmatter conventions in the 'lessons' folder.
 * You can also have blog posts.
 
+### Updates
+
+* December 23, 2017 - The 'Docs' page is now mobile responsive.
+
 ### These are the features from [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter), which remain:  
 * Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 * Separate components for everything

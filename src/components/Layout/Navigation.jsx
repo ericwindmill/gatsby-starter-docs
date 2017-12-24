@@ -15,6 +15,21 @@ const NavContainer = styled.div`
     font-weight: 200;
     color: black;
   }
+  
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    section {
+      margin-bottom: 20px;
+    }
+    
+    span {
+      display: none;
+    }
+    
+  }
 `
 
 class Navigation extends React.Component {
@@ -27,7 +42,7 @@ class Navigation extends React.Component {
           <Link className='nav-link' to='/lesson-one' > DOCS </Link>
           <Link className='nav-link' to='/about' > ABOUT </Link>
         </section>
-        <UserLinks />
+        <span><UserLinks /></span>
       </NavContainer>
     )
   }
