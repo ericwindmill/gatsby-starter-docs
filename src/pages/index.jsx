@@ -4,8 +4,8 @@ import styled from "styled-components"
 
 import SEO from "../components/SEO/SEO"
 import config from "../../data/SiteConfig"
-import MainHeader from '../components/Layout/Header'
 import CtaButton from '../components/CtaButton'
+import Navigation from '../components/Layout/Navigation'
 
 class Index extends React.Component {
 
@@ -16,12 +16,14 @@ class Index extends React.Component {
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
         <main>
-          <MainHeader
-            siteTitle={config.siteTitle}
-            siteDescription={config.siteDescription}
-            location={this.props.location}
-            logo={config.siteLogo}
-          />
+          <IndexHeadContainer>
+            <Navigation />
+            <Hero>
+              <img src={config.siteLogo} width='150px' />
+              <h1>{config.siteTitle}</h1>
+              <h4>{config.siteDescription}</h4>
+            </Hero>
+          </IndexHeadContainer>
           <BodyContainer>
             <h2>A Gatsby Template for Content</h2>
             <p>Made for modern documentation sites. Table of Contents automatically generated from markdown files. </p>
@@ -34,6 +36,19 @@ class Index extends React.Component {
 }
 
 export default Index;
+
+const IndexHeadContainer = styled.div`
+  background: ${props => props.theme.brand};
+  padding: ${props => props.theme.sitePadding};
+  text-align: center;
+`
+
+const Hero = styled.div`
+  padding: 50px 0;
+  & > h1 {
+    font-weight: 600;
+  }
+`
 
 const BodyContainer = styled.div`
   padding: ${props => props.theme.sitePadding};
