@@ -1,17 +1,18 @@
-import React from "react";
-import Helmet from "react-helmet";
+import React from "react"
+import Helmet from "react-helmet"
 import styled from "styled-components"
+import Link from 'gatsby-link'
 
 import SEO from "../components/SEO"
 import SiteHeader from '../components/Layout/Header'
 import config from "../../data/SiteConfig"
-import TableOfContents from "../components/Layout/TableOfContents";
+import TableOfContents from "../components/Layout/TableOfContents"
 
 export default class LessonTemplate extends React.Component {
   render() {
-    const {slug} = this.props.pathContext;
-    const postNode = this.props.data.postBySlug;
-    const post = postNode.frontmatter;
+    const {slug} = this.props.pathContext
+    const postNode = this.props.data.postBySlug
+    const post = postNode.frontmatter
     if (!post.id) {
       post.id = slug;
     }
@@ -88,21 +89,6 @@ const ToCContainer = styled.div`
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query LessonBySlug($slug: String!) {
-  allPostTitles: allMarkdownRemark{
-    edges {
-      node {
-        frontmatter {
-          title
-          lesson
-          chapter
-          type
-        }
-        fields {
-          slug
-        }
-      }
-    }
-  }
   postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
     html
     timeToRead
@@ -113,9 +99,6 @@ export const pageQuery = graphql`
       date
       category
       tags
-    }
-    fields {
-      slug
     }
   }
   tableOfContents: lessonsJson {
