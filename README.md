@@ -46,6 +46,10 @@ This requires more upfront work, but I've found it to be infintely better when y
 * Configured to auto generate documentation 'Table of Contents'
 * You can also have blog posts.
 
+### Updates
+
+* December 23, 2017 - The 'Docs' page is now mobile responsive.
+
 ### These are the features from [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter), which remain:  
 * Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 * Separate components for everything
