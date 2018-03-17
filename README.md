@@ -2,7 +2,7 @@
     <img src="static/logos/logo-1024.png" alt="Logo" width='100px' height='100px'/>
 </div>
 
-# Gatsby Docs Starter 
+# Gatsby Docs Starter 1.0
 
 #### This Project was forked from [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter)
 
@@ -14,6 +14,20 @@ Developed for creating Documentation or Tutorial websites.
 
 This template provides everything but the content. You could just write all your lessons in markdown files, configure a few lines of code, and have a completely built documentation website.
 
+## Changelog
+
+Updated 3/17/18
+
+* Updated Table of Contents system: 
+   * You now define your table of contents in the 'table_of_contents.json' file under the 'content' folder.
+   * The GraphQl query in your 'lesson' template should match your table_of_contents.
+   * The `TableOfContents` component does the rest.
+
+This requires more upfront work, but I've found it to be infintely better when your page count gets high. It's easier to move things around and have the ToC **just work**.
+   
+* Basic styling added to the 'post' template
+* mobile responsive
+    
 ## Features
 
 <div align="center">
@@ -29,7 +43,7 @@ This template provides everything but the content. You could just write all your
 * Styled Components CSS w/ ThemeProvider for easy cross-site UI changes.
 * Custom code-highlight theme
 * React Icons
-* Configured to auto generate documentation 'Table of Contents' - you just need to follow the file frontmatter conventions in the 'lessons' folder.
+* Configured to auto generate documentation 'Table of Contents'
 * You can also have blog posts.
 
 ### These are the features from [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter), which remain:  

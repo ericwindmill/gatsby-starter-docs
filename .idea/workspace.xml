@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de849394-2008-46b0-9148-53273cdb204e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/content/posts/post_one.md" afterPath="$PROJECT_DIR$/content/posts/post_one.md" />
-      <change beforePath="$PROJECT_DIR$/gatsby-node.js" afterPath="$PROJECT_DIR$/gatsby-node.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/TableOfContents.jsx" afterPath="$PROJECT_DIR$/src/components/Layout/TableOfContents.jsx" />
-      <change beforePath="$PROJECT_DIR$/src/templates/lesson.jsx" afterPath="$PROJECT_DIR$/src/templates/lesson.jsx" />
-      <change beforePath="$PROJECT_DIR$/src/templates/post.jsx" afterPath="$PROJECT_DIR$/src/templates/post.jsx" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,195 +21,21 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="post.jsx" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/templates/post.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="429">
-                  <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                    <marker date="1521308851908" expanded="true" signature="1661:1728" ph="{...}" />
-                    <marker date="1521308851908" expanded="true" signature="1764:2048" ph="{...}" />
-                    <marker date="1521308851908" expanded="true" signature="1902:1984" ph="{...}" />
-                    <marker date="1521308851908" expanded="true" signature="1995:2047" ph="{...}" />
-                    <marker date="1521308851908" expanded="true" signature="2086:2120" ph="{...}" />
-                    <marker date="1521308851908" expanded="true" signature="2187:2466" ph="query...{&#10;    markdownRemark(fields: { slug: { eq: $slug } }) {&#10;      html&#10;      timeToRead&#10;      excerpt&#10;      frontmatter {&#10;        title&#10;        cover&#10;        date&#10;        category&#10;        tags&#10;      }&#10;      fields {&#10;        slug&#10;      }&#10;    }&#10;  }" />
-                    <marker date="1521308851908" expanded="true" signature="2193:2207" ph="BlogPostBySlug...BlogPostBySlug" />
-                    <marker date="1521308851908" expanded="true" signature="2207:2223" ph="(...)" />
-                    <marker date="1521308851908" expanded="true" signature="2215:2221" ph="String...String" />
-                    <marker date="1521308851908" expanded="true" signature="2224:2466" ph="{...}" />
-                    <marker date="1521308851908" expanded="true" signature="2230:2244" ph="markdownRemark...markdownRemark" />
-                    <marker date="1521308851908" expanded="true" signature="2230:2462" ph="markdownRemark...{&#10;      html&#10;      timeToRead&#10;      excerpt&#10;      frontmatter {&#10;        title&#10;        cover&#10;        date&#10;        category&#10;        tags&#10;      }&#10;      fields {&#10;        slug&#10;      }&#10;    }" />
-                    <marker date="1521308851908" expanded="true" signature="2244:2277" ph="(...)" />
-                    <marker date="1521308851908" expanded="true" signature="2245:2251" ph="fields...fields" />
-                    <marker date="1521308851908" expanded="true" signature="2245:2276" ph="fields...{ slug: { eq: $slug } }" />
-                    <marker date="1521308851908" expanded="true" signature="2253:2276" ph="{...}" />
-                    <marker date="1521308851908" expanded="true" signature="2255:2259" ph="slug...slug" />
-                    <marker date="1521308851908" expanded="true" signature="2255:2274" ph="slug...{ eq: $slug }" />
-                    <marker date="1521308851908" expanded="true" signature="2261:2274" ph="{...}" />
-                    <marker date="1521308851908" expanded="true" signature="2263:2265" ph="eq...eq" />
-                    <marker date="1521308851908" expanded="true" signature="2278:2462" ph="{...}" />
-                    <marker date="1521308851908" expanded="true" signature="2286:2290" ph="html...html" />
-                    <marker date="1521308851908" expanded="true" signature="2297:2307" ph="timeToRead...timeToRead" />
-                    <marker date="1521308851908" expanded="true" signature="2314:2321" ph="excerpt...excerpt" />
-                    <marker date="1521308851908" expanded="true" signature="2328:2339" ph="frontmatter...frontmatter" />
-                    <marker date="1521308851908" expanded="true" signature="2328:2420" ph="frontmatter...{&#10;        title&#10;        cover&#10;        date&#10;        category&#10;        tags&#10;      }" />
-                    <marker date="1521308851908" expanded="true" signature="2340:2420" ph="{...}" />
-                    <marker date="1521308851908" expanded="true" signature="2350:2355" ph="title...title" />
-                    <marker date="1521308851908" expanded="true" signature="2364:2369" ph="cover...cover" />
-                    <marker date="1521308851908" expanded="true" signature="2378:2382" ph="date...date" />
-                    <marker date="1521308851908" expanded="true" signature="2391:2399" ph="category...category" />
-                    <marker date="1521308851908" expanded="true" signature="2408:2412" ph="tags...tags" />
-                    <marker date="1521308851908" expanded="true" signature="2427:2433" ph="fields...fields" />
-                    <marker date="1521308851908" expanded="true" signature="2427:2456" ph="fields...{&#10;        slug&#10;      }" />
-                    <marker date="1521308851908" expanded="true" signature="2434:2456" ph="{...}" />
-                    <marker date="1521308851908" expanded="true" signature="2444:2448" ph="slug...slug" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="lesson.jsx" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/templates/lesson.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="249">
-                  <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                    <marker date="1521308072870" expanded="true" signature="1433:1536" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="1572:1882" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="1734:1816" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="1829:1881" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="1920:1976" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2011:2122" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2189:3638" ph="query...{&#10;    allPostTitles: allMarkdownRemark{&#10;        edges {&#10;          node {&#10;            frontmatter {&#10;              title&#10;              lesson&#10;              chapter&#10;              type&#10;            }&#10;            fields {&#10;              slug&#10;            }&#10;          }&#10;        }&#10;      }&#10;      postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {&#10;        html&#10;        timeToRead&#10;        excerpt&#10;        frontmatter {&#10;          title&#10;          cover&#10;          date&#10;          category&#10;          tags&#10;        }&#10;        fields {&#10;          slug&#10;        }&#10;      }&#10;      &#10;  }" />
-                    <marker date="1521308072870" expanded="true" signature="2195:2207" ph="LessonBySlug...LessonBySlug" />
-                    <marker date="1521308072870" expanded="true" signature="2207:2223" ph="(...)" />
-                    <marker date="1521308072870" expanded="true" signature="2215:2221" ph="String...String" />
-                    <marker date="1521308072870" expanded="true" signature="2224:3638" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2240:2254" ph="markdownRemark...markdownRemark" />
-                    <marker date="1521308072870" expanded="true" signature="2240:2414" ph="markdownRemark...{&#10;        html&#10;        timeToRead&#10;        excerpt&#10;        frontmatter {&#10;          title&#10;          cover&#10;          date&#10;          category&#10;          tags&#10;        }&#10;        fields {&#10;          slug&#10;        }&#10;      }" />
-                    <marker date="1521308072870" expanded="true" signature="2254:2287" ph="(...)" />
-                    <marker date="1521308072870" expanded="true" signature="2255:2261" ph="fields...fields" />
-                    <marker date="1521308072870" expanded="true" signature="2255:2286" ph="fields...{ slug: { eq: $slug } }" />
-                    <marker date="1521308072870" expanded="true" signature="2263:2286" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2265:2269" ph="slug...slug" />
-                    <marker date="1521308072870" expanded="true" signature="2265:2284" ph="slug...{ eq: $slug }" />
-                    <marker date="1521308072870" expanded="true" signature="2271:2284" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2273:2275" ph="eq...eq" />
-                    <marker date="1521308072870" expanded="true" signature="2288:2414" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2294:2298" ph="html...html" />
-                    <marker date="1521308072870" expanded="true" signature="2303:2313" ph="timeToRead...timeToRead" />
-                    <marker date="1521308072870" expanded="true" signature="2318:2325" ph="excerpt...excerpt" />
-                    <marker date="1521308072870" expanded="true" signature="2330:2341" ph="frontmatter...frontmatter" />
-                    <marker date="1521308072870" expanded="true" signature="2330:2410" ph="frontmatter...{&#10;          title&#10;          cover&#10;          date&#10;          category&#10;          tags&#10;        }" />
-                    <marker date="1521308072870" expanded="true" signature="2342:2410" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2350:2355" ph="title...title" />
-                    <marker date="1521308072870" expanded="true" signature="2362:2367" ph="cover...cover" />
-                    <marker date="1521308072870" expanded="true" signature="2374:2378" ph="date...date" />
-                    <marker date="1521308072870" expanded="true" signature="2385:2393" ph="category...category" />
-                    <marker date="1521308072870" expanded="true" signature="2400:2404" ph="tags...tags" />
-                    <marker date="1521308072870" expanded="true" signature="2434:2445" ph="lessonsJson...lessonsJson" />
-                    <marker date="1521308072870" expanded="true" signature="2434:3634" ph="lessonsJson...{&#10;      coolness&#10;      chapters {&#10;        one {&#10;          subchapter_one_one {&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }&#10;          subchapter_one_two {&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }&#10;        }&#10;        two {&#10;          subchapter_two_one {&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }&#10;        }&#10;        three {&#10;          post {&#10;            id&#10;            childMarkdownRemark {&#10;              fields {&#10;                slug&#10;              }&#10;              frontmatter {&#10;                title&#10;              }&#10;            }&#10;          }&#10;        }&#10;      }&#10;    }" />
-                    <marker date="1521308072870" expanded="true" signature="2446:3634" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2454:2462" ph="coolness...coolness" />
-                    <marker date="1521308072870" expanded="true" signature="2469:2477" ph="chapters...chapters" />
-                    <marker date="1521308072870" expanded="true" signature="2469:3628" ph="chapters...{&#10;        one {&#10;          subchapter_one_one {&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }&#10;          subchapter_one_two {&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }&#10;        }&#10;        two {&#10;          subchapter_two_one {&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }&#10;        }&#10;        three {&#10;          post {&#10;            id&#10;            childMarkdownRemark {&#10;              fields {&#10;                slug&#10;              }&#10;              frontmatter {&#10;                title&#10;              }&#10;            }&#10;          }&#10;        }&#10;      }" />
-                    <marker date="1521308072870" expanded="true" signature="2478:3628" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2488:2491" ph="one...one" />
-                    <marker date="1521308072870" expanded="true" signature="2488:3069" ph="one...{&#10;          subchapter_one_one {&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }&#10;          subchapter_one_two {&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }&#10;        }" />
-                    <marker date="1521308072870" expanded="true" signature="2492:3069" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2504:2522" ph="subchapter_one_one...subchapter_one_one" />
-                    <marker date="1521308072870" expanded="true" signature="2504:2776" ph="subchapter_one_one...{&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }" />
-                    <marker date="1521308072870" expanded="true" signature="2523:2776" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2537:2541" ph="post...post" />
-                    <marker date="1521308072870" expanded="true" signature="2537:2764" ph="post...{&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }" />
-                    <marker date="1521308072870" expanded="true" signature="2542:2764" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2558:2560" ph="id...id" />
-                    <marker date="1521308072870" expanded="true" signature="2575:2594" ph="childMarkdownRemark...childMarkdownRemark" />
-                    <marker date="1521308072870" expanded="true" signature="2575:2750" ph="childMarkdownRemark...{&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }" />
-                    <marker date="1521308072870" expanded="true" signature="2595:2750" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2613:2619" ph="fields...fields" />
-                    <marker date="1521308072870" expanded="true" signature="2613:2662" ph="fields...{&#10;                  slug&#10;                }" />
-                    <marker date="1521308072870" expanded="true" signature="2620:2662" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2640:2644" ph="slug...slug" />
-                    <marker date="1521308072870" expanded="true" signature="2679:2690" ph="frontmatter...frontmatter" />
-                    <marker date="1521308072870" expanded="true" signature="2679:2734" ph="frontmatter...{&#10;                  title&#10;                }" />
-                    <marker date="1521308072870" expanded="true" signature="2691:2734" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2711:2716" ph="title...title" />
-                    <marker date="1521308072870" expanded="true" signature="2787:2805" ph="subchapter_one_two...subchapter_one_two" />
-                    <marker date="1521308072870" expanded="true" signature="2787:3059" ph="subchapter_one_two...{&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }" />
-                    <marker date="1521308072870" expanded="true" signature="2806:3059" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2820:2824" ph="post...post" />
-                    <marker date="1521308072870" expanded="true" signature="2820:3047" ph="post...{&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }" />
-                    <marker date="1521308072870" expanded="true" signature="2825:3047" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2841:2843" ph="id...id" />
-                    <marker date="1521308072870" expanded="true" signature="2858:2877" ph="childMarkdownRemark...childMarkdownRemark" />
-                    <marker date="1521308072870" expanded="true" signature="2858:3033" ph="childMarkdownRemark...{&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }" />
-                    <marker date="1521308072870" expanded="true" signature="2878:3033" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2896:2902" ph="fields...fields" />
-                    <marker date="1521308072870" expanded="true" signature="2896:2945" ph="fields...{&#10;                  slug&#10;                }" />
-                    <marker date="1521308072870" expanded="true" signature="2903:2945" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2923:2927" ph="slug...slug" />
-                    <marker date="1521308072870" expanded="true" signature="2962:2973" ph="frontmatter...frontmatter" />
-                    <marker date="1521308072870" expanded="true" signature="2962:3017" ph="frontmatter...{&#10;                  title&#10;                }" />
-                    <marker date="1521308072870" expanded="true" signature="2974:3017" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="2994:2999" ph="title...title" />
-                    <marker date="1521308072870" expanded="true" signature="3078:3081" ph="two...two" />
-                    <marker date="1521308072870" expanded="true" signature="3078:3376" ph="two...{&#10;          subchapter_two_one {&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }&#10;        }" />
-                    <marker date="1521308072870" expanded="true" signature="3082:3376" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="3094:3112" ph="subchapter_two_one...subchapter_two_one" />
-                    <marker date="1521308072870" expanded="true" signature="3094:3366" ph="subchapter_two_one...{&#10;            post {&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }&#10;          }" />
-                    <marker date="1521308072870" expanded="true" signature="3113:3366" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="3127:3131" ph="post...post" />
-                    <marker date="1521308072870" expanded="true" signature="3127:3354" ph="post...{&#10;              id&#10;              childMarkdownRemark {&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }&#10;            }" />
-                    <marker date="1521308072870" expanded="true" signature="3132:3354" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="3148:3150" ph="id...id" />
-                    <marker date="1521308072870" expanded="true" signature="3165:3184" ph="childMarkdownRemark...childMarkdownRemark" />
-                    <marker date="1521308072870" expanded="true" signature="3165:3340" ph="childMarkdownRemark...{&#10;                fields {&#10;                  slug&#10;                }&#10;                frontmatter {&#10;                  title&#10;                }&#10;              }" />
-                    <marker date="1521308072870" expanded="true" signature="3185:3340" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="3203:3209" ph="fields...fields" />
-                    <marker date="1521308072870" expanded="true" signature="3203:3252" ph="fields...{&#10;                  slug&#10;                }" />
-                    <marker date="1521308072870" expanded="true" signature="3210:3252" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="3230:3234" ph="slug...slug" />
-                    <marker date="1521308072870" expanded="true" signature="3269:3280" ph="frontmatter...frontmatter" />
-                    <marker date="1521308072870" expanded="true" signature="3269:3324" ph="frontmatter...{&#10;                  title&#10;                }" />
-                    <marker date="1521308072870" expanded="true" signature="3281:3324" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="3301:3306" ph="title...title" />
-                    <marker date="1521308072870" expanded="true" signature="3385:3390" ph="three...three" />
-                    <marker date="1521308072870" expanded="true" signature="3385:3620" ph="three...{&#10;          post {&#10;            id&#10;            childMarkdownRemark {&#10;              fields {&#10;                slug&#10;              }&#10;              frontmatter {&#10;                title&#10;              }&#10;            }&#10;          }&#10;        }" />
-                    <marker date="1521308072870" expanded="true" signature="3391:3620" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="3403:3407" ph="post...post" />
-                    <marker date="1521308072870" expanded="true" signature="3403:3610" ph="post...{&#10;            id&#10;            childMarkdownRemark {&#10;              fields {&#10;                slug&#10;              }&#10;              frontmatter {&#10;                title&#10;              }&#10;            }&#10;          }" />
-                    <marker date="1521308072870" expanded="true" signature="3408:3610" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="3422:3424" ph="id...id" />
-                    <marker date="1521308072870" expanded="true" signature="3437:3456" ph="childMarkdownRemark...childMarkdownRemark" />
-                    <marker date="1521308072870" expanded="true" signature="3437:3598" ph="childMarkdownRemark...{&#10;              fields {&#10;                slug&#10;              }&#10;              frontmatter {&#10;                title&#10;              }&#10;            }" />
-                    <marker date="1521308072870" expanded="true" signature="3457:3598" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="3473:3479" ph="fields...fields" />
-                    <marker date="1521308072870" expanded="true" signature="3473:3518" ph="fields...{&#10;                slug&#10;              }" />
-                    <marker date="1521308072870" expanded="true" signature="3480:3518" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="3498:3502" ph="slug...slug" />
-                    <marker date="1521308072870" expanded="true" signature="3533:3544" ph="frontmatter...frontmatter" />
-                    <marker date="1521308072870" expanded="true" signature="3533:3584" ph="frontmatter...{&#10;                title&#10;              }" />
-                    <marker date="1521308072870" expanded="true" signature="3545:3584" ph="{...}" />
-                    <marker date="1521308072870" expanded="true" signature="3563:3568" ph="title...title" />
-                    <marker date="1521308072870" expanded="true" signature="3634:3638" ph="lessonsJson...{&#10;          pages{&#10;              one{&#10;                  label&#10;                  post{&#10;                      childMarkdownRemark{&#10;                          frontmatter{&#10;                              title&#10;                          }&#10;                      }&#10;                  }&#10;              }&#10;          }&#10;      }" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="595">
+                <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -265,7 +86,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/pages/about.jsx" />
         <option value="$PROJECT_DIR$/src/components/Layout/Header.jsx" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/gatsby-config.js" />
         <option value="$PROJECT_DIR$/src/utils/table_of_contents_helper.js" />
         <option value="$PROJECT_DIR$/src/utils/table_of_contents_helper.jsx" />
@@ -281,6 +101,7 @@
         <option value="$PROJECT_DIR$/content/posts/post_one.md" />
         <option value="$PROJECT_DIR$/gatsby-node.js" />
         <option value="$PROJECT_DIR$/src/templates/post.jsx" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -340,6 +161,12 @@
               <item name="gatsby-docs-starter" type="b2602c69:ProjectViewProjectNode" />
               <item name="gatsby-docs-starter" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gatsby-docs-starter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gatsby-docs-starter" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="lessons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gatsby-docs-starter" type="b2602c69:ProjectViewProjectNode" />
@@ -423,15 +250,16 @@
       <workItem from="1511612028382" duration="23251000" />
       <workItem from="1520877481727" duration="353000" />
       <workItem from="1520878430448" duration="3316000" />
-      <workItem from="1521297943064" duration="10428000" />
+      <workItem from="1521297943064" duration="10756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63867000" />
+    <option name="totallyTimeSpent" value="64195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -440,7 +268,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.265625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.265625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15618336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -626,7 +454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/public/component---src-templates-lesson-jsx-fb7465c924cc94aac52a.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -899,52 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/post.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <marker date="1521308851908" expanded="true" signature="1661:1728" ph="{...}" />
-            <marker date="1521308851908" expanded="true" signature="1764:2048" ph="{...}" />
-            <marker date="1521308851908" expanded="true" signature="1902:1984" ph="{...}" />
-            <marker date="1521308851908" expanded="true" signature="1995:2047" ph="{...}" />
-            <marker date="1521308851908" expanded="true" signature="2086:2120" ph="{...}" />
-            <marker date="1521308851908" expanded="true" signature="2187:2466" ph="query...{&#10;    markdownRemark(fields: { slug: { eq: $slug } }) {&#10;      html&#10;      timeToRead&#10;      excerpt&#10;      frontmatter {&#10;        title&#10;        cover&#10;        date&#10;        category&#10;        tags&#10;      }&#10;      fields {&#10;        slug&#10;      }&#10;    }&#10;  }" />
-            <marker date="1521308851908" expanded="true" signature="2193:2207" ph="BlogPostBySlug...BlogPostBySlug" />
-            <marker date="1521308851908" expanded="true" signature="2207:2223" ph="(...)" />
-            <marker date="1521308851908" expanded="true" signature="2215:2221" ph="String...String" />
-            <marker date="1521308851908" expanded="true" signature="2224:2466" ph="{...}" />
-            <marker date="1521308851908" expanded="true" signature="2230:2244" ph="markdownRemark...markdownRemark" />
-            <marker date="1521308851908" expanded="true" signature="2230:2462" ph="markdownRemark...{&#10;      html&#10;      timeToRead&#10;      excerpt&#10;      frontmatter {&#10;        title&#10;        cover&#10;        date&#10;        category&#10;        tags&#10;      }&#10;      fields {&#10;        slug&#10;      }&#10;    }" />
-            <marker date="1521308851908" expanded="true" signature="2244:2277" ph="(...)" />
-            <marker date="1521308851908" expanded="true" signature="2245:2251" ph="fields...fields" />
-            <marker date="1521308851908" expanded="true" signature="2245:2276" ph="fields...{ slug: { eq: $slug } }" />
-            <marker date="1521308851908" expanded="true" signature="2253:2276" ph="{...}" />
-            <marker date="1521308851908" expanded="true" signature="2255:2259" ph="slug...slug" />
-            <marker date="1521308851908" expanded="true" signature="2255:2274" ph="slug...{ eq: $slug }" />
-            <marker date="1521308851908" expanded="true" signature="2261:2274" ph="{...}" />
-            <marker date="1521308851908" expanded="true" signature="2263:2265" ph="eq...eq" />
-            <marker date="1521308851908" expanded="true" signature="2278:2462" ph="{...}" />
-            <marker date="1521308851908" expanded="true" signature="2286:2290" ph="html...html" />
-            <marker date="1521308851908" expanded="true" signature="2297:2307" ph="timeToRead...timeToRead" />
-            <marker date="1521308851908" expanded="true" signature="2314:2321" ph="excerpt...excerpt" />
-            <marker date="1521308851908" expanded="true" signature="2328:2339" ph="frontmatter...frontmatter" />
-            <marker date="1521308851908" expanded="true" signature="2328:2420" ph="frontmatter...{&#10;        title&#10;        cover&#10;        date&#10;        category&#10;        tags&#10;      }" />
-            <marker date="1521308851908" expanded="true" signature="2340:2420" ph="{...}" />
-            <marker date="1521308851908" expanded="true" signature="2350:2355" ph="title...title" />
-            <marker date="1521308851908" expanded="true" signature="2364:2369" ph="cover...cover" />
-            <marker date="1521308851908" expanded="true" signature="2378:2382" ph="date...date" />
-            <marker date="1521308851908" expanded="true" signature="2391:2399" ph="category...category" />
-            <marker date="1521308851908" expanded="true" signature="2408:2412" ph="tags...tags" />
-            <marker date="1521308851908" expanded="true" signature="2427:2433" ph="fields...fields" />
-            <marker date="1521308851908" expanded="true" signature="2427:2456" ph="fields...{&#10;        slug&#10;      }" />
-            <marker date="1521308851908" expanded="true" signature="2434:2456" ph="{...}" />
-            <marker date="1521308851908" expanded="true" signature="2444:2448" ph="slug...slug" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/lesson.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -1071,6 +852,63 @@
             <marker date="1521308072870" expanded="true" signature="3563:3568" ph="title...title" />
             <marker date="1521308072870" expanded="true" signature="3634:3638" ph="lessonsJson...{&#10;          pages{&#10;              one{&#10;                  label&#10;                  post{&#10;                      childMarkdownRemark{&#10;                          frontmatter{&#10;                              title&#10;                          }&#10;                      }&#10;                  }&#10;              }&#10;          }&#10;      }" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/post.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="48" column="6" lean-forward="true" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1521308851908" expanded="true" signature="1661:1728" ph="{...}" />
+            <marker date="1521308851908" expanded="true" signature="1764:2048" ph="{...}" />
+            <marker date="1521308851908" expanded="true" signature="1902:1984" ph="{...}" />
+            <marker date="1521308851908" expanded="true" signature="1995:2047" ph="{...}" />
+            <marker date="1521308851908" expanded="true" signature="2086:2120" ph="{...}" />
+            <marker date="1521308851908" expanded="true" signature="2187:2466" ph="query...{&#10;    markdownRemark(fields: { slug: { eq: $slug } }) {&#10;      html&#10;      timeToRead&#10;      excerpt&#10;      frontmatter {&#10;        title&#10;        cover&#10;        date&#10;        category&#10;        tags&#10;      }&#10;      fields {&#10;        slug&#10;      }&#10;    }&#10;  }" />
+            <marker date="1521308851908" expanded="true" signature="2193:2207" ph="BlogPostBySlug...BlogPostBySlug" />
+            <marker date="1521308851908" expanded="true" signature="2207:2223" ph="(...)" />
+            <marker date="1521308851908" expanded="true" signature="2215:2221" ph="String...String" />
+            <marker date="1521308851908" expanded="true" signature="2224:2466" ph="{...}" />
+            <marker date="1521308851908" expanded="true" signature="2230:2244" ph="markdownRemark...markdownRemark" />
+            <marker date="1521308851908" expanded="true" signature="2230:2462" ph="markdownRemark...{&#10;      html&#10;      timeToRead&#10;      excerpt&#10;      frontmatter {&#10;        title&#10;        cover&#10;        date&#10;        category&#10;        tags&#10;      }&#10;      fields {&#10;        slug&#10;      }&#10;    }" />
+            <marker date="1521308851908" expanded="true" signature="2244:2277" ph="(...)" />
+            <marker date="1521308851908" expanded="true" signature="2245:2251" ph="fields...fields" />
+            <marker date="1521308851908" expanded="true" signature="2245:2276" ph="fields...{ slug: { eq: $slug } }" />
+            <marker date="1521308851908" expanded="true" signature="2253:2276" ph="{...}" />
+            <marker date="1521308851908" expanded="true" signature="2255:2259" ph="slug...slug" />
+            <marker date="1521308851908" expanded="true" signature="2255:2274" ph="slug...{ eq: $slug }" />
+            <marker date="1521308851908" expanded="true" signature="2261:2274" ph="{...}" />
+            <marker date="1521308851908" expanded="true" signature="2263:2265" ph="eq...eq" />
+            <marker date="1521308851908" expanded="true" signature="2278:2462" ph="{...}" />
+            <marker date="1521308851908" expanded="true" signature="2286:2290" ph="html...html" />
+            <marker date="1521308851908" expanded="true" signature="2297:2307" ph="timeToRead...timeToRead" />
+            <marker date="1521308851908" expanded="true" signature="2314:2321" ph="excerpt...excerpt" />
+            <marker date="1521308851908" expanded="true" signature="2328:2339" ph="frontmatter...frontmatter" />
+            <marker date="1521308851908" expanded="true" signature="2328:2420" ph="frontmatter...{&#10;        title&#10;        cover&#10;        date&#10;        category&#10;        tags&#10;      }" />
+            <marker date="1521308851908" expanded="true" signature="2340:2420" ph="{...}" />
+            <marker date="1521308851908" expanded="true" signature="2350:2355" ph="title...title" />
+            <marker date="1521308851908" expanded="true" signature="2364:2369" ph="cover...cover" />
+            <marker date="1521308851908" expanded="true" signature="2378:2382" ph="date...date" />
+            <marker date="1521308851908" expanded="true" signature="2391:2399" ph="category...category" />
+            <marker date="1521308851908" expanded="true" signature="2408:2412" ph="tags...tags" />
+            <marker date="1521308851908" expanded="true" signature="2427:2433" ph="fields...fields" />
+            <marker date="1521308851908" expanded="true" signature="2427:2456" ph="fields...{&#10;        slug&#10;      }" />
+            <marker date="1521308851908" expanded="true" signature="2434:2456" ph="{...}" />
+            <marker date="1521308851908" expanded="true" signature="2444:2448" ph="slug...slug" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="595">
+            <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
