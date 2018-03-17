@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import styled from "styled-components"
 
-import SEO from "../components/SEO/SEO"
+import SEO from "../components/SEO"
 import SiteHeader from '../components/Layout/Header'
 import config from "../../data/SiteConfig"
 import TableOfContents from "../components/Layout/TableOfContents";
@@ -87,55 +87,97 @@ const ToCContainer = styled.div`
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-    query LessonBySlug($slug: String!) {
-        allPostTitles: allMarkdownRemark{
-            edges {
-                node {
-                    frontmatter {
-                        title
-                        lesson
-                        chapter
-                        type
-                    }
-                    fields {
-                        slug
-                    }
-                }
-            }
+  query LessonBySlug($slug: String!) {
+  allPostTitles: allMarkdownRemark{
+    edges {
+      node {
+        frontmatter {
+          title
+          lesson
+          chapter
+          type
         }
-        postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
-            html
-            timeToRead
-            excerpt
-            frontmatter {
-                title
-                cover
-                date
-                category
-                tags
-            }
-            fields {
-                slug
-            }
+        fields {
+          slug
         }
-        tableOfContents: lessonsJson{
-            chapters{
-                one{
-                    subchapterone {
-                        label
-                        post{
-                            childMarkdownRemark{
-                                frontmatter {
-                                    title
-                                }
-                                fields {
-                                    slug
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+  }
+  postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
+    html
+    timeToRead
+    excerpt
+    frontmatter {
+      title
+      cover
+      date
+      category
+      tags
+    }
+    fields {
+      slug
+    }
+  }
+  tableOfContents: lessonsJson {
+      coolness
+      chapters {
+        one {
+          subchapter_one_one {
+            post {
+              id
+              childMarkdownRemark {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
+          subchapter_one_two {
+            post {
+              id
+              childMarkdownRemark {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
+        }
+        two {
+          subchapter_two_one {
+            post {
+              id
+              childMarkdownRemark {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
+        }
+        three {
+          post {
+            id
+            childMarkdownRemark {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 `;

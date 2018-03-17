@@ -1,21 +1,36 @@
 {
-  "id": "my-chapters",
+  "id": "table-of-contents",
+  "coolness": "very-cool",
   "chapters": {
     "one": {
-      "subchapterone": [
+      "subchapter_one_one": [
         {
-          "label": "Lesson One",
           "post": "./lesson_one.md"
         },
         {
-          "label": "Lesson Two",
           "post": "./lesson_two.md"
         },
         {
-          "label": "Lesson Three",
           "post": "./lesson_three.md"
         }
+      ],
+      "subchapter_one_two": [
+        {
+          "post": "./lesson_four.md"
+        }
       ]
-    }
+    },
+    "two": {
+      "subchapter_two_one": [
+        {
+          "post": "./lesson_five.md"
+        }
+      ]
+    },
+    "three": [
+      {
+        "post": "./lesson_six.md"
+      }
+    ]
   }
 }

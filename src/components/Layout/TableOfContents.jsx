@@ -7,28 +7,61 @@ class TableOfContents extends React.Component {
   constructor() {
     super();
     this.nodeListItemsToRender = [];
+    this.currentLevel = 0;
   }
+
   buildNodes(nodes, level) {
-    let currentLevel = level !== undefined ? level : 0;
-
+    // Level matters because sub-chapter <li> and chapter <li>s are styled differently
+    //
     // If the node is an Array, it holds the actual page nodes itself,
-    // So we want to build the links to those pages.
-    // Otherwise, its an object, so it must be a chapter or sub-chapter
-    // In that case, build the Chapter <li> and then start the process over.
-
-    // Level only matters because sub-chapters and chapters are styled differently
-
-    // For level, if we've hit an array, then we must be as deeply nested as possible,
+    // 1. Add the node's value as either a chapter <li> or subchapter <li> - based on level
+      // 2. Build the lesson <li> links
+      //
+    // Else, its an object, so it must be a chapter or sub-chapter
+      // 1. build the Chapter <li>
+      // 2. Recursively restart on the child node
+    //
+    // For level, if we've hit an array, then we must be as deeply nested as possible.
     // So the next node we hit will be a top level chapter node, so we're back to level 0.
+    //
+
+    this.currentLevel = level !== undefined ? level : this.currentLevel;
+
+    function getNextNode(postNodes, node) {
+      const keys = Object.keys(nodes);
+      const nextIndex = keys.indexOf(node) +1;
+      return keys[nextIndex];
+    }
 
     Object.keys(nodes).forEach(node => {
+      const nextNode = getNextNode(nodes, node);
       if (Array.isArray(nodes[node])) {
+        // Add the Lowest Level Chapter Name (Title of Array):
+        if (this.currentLevel !== 0) {
+          this.nodeListItemsToRender.push(
+            <SubchapterLIContainer>
+              <h5>
+                {node}
+              </h5>
+            </SubchapterLIContainer>
+          );
+        } else {
+          this.nodeListItemsToRender.push(
+            <ChapterLIContainer>
+              <h5>
+                {node}
+              </h5>
+            </ChapterLIContainer>
+          );
+        }
         this.buildLessonItemNodes(nodes[node]);
-        currentLevel = 0;
+        if (nextNode === undefined) {
+          this.currentLevel -= 1;
+        }
       } else {
-        this.buildChapterNodes(node, currentLevel)
-        currentLevel += 1;
-        this.buildNodes(nodes[node], currentLevel)
+        this.buildChapterNodes(node, this.currentLevel)
+        this.currentLevel += 1;
+        this.buildNodes(nodes[node], this.currentLevel)
       }
     });
   }
@@ -69,122 +102,8 @@ class TableOfContents extends React.Component {
     })
   }
 
-
-  // buildNodesDos() {
-    // Start with the highest level nodes
-    // Object.keys(nodes).forEach(node => {
-      // if the nodes child is an object, its a subchapter title
-        // handle subchapter title recursively
-
-      // if its an array, it's the post nodes,
-        // handle the post nodes
-
-
-      // First, extract all the data for that lesson for convenience.
-    //   const currentPage = {};
-    //   nodes[chapter].forEach(page => {
-    //     const postFrontmatter = page.post.childMarkdownRemark.frontmatter
-    //     const postNodeFields = page.post.childMarkdownRemark.fields
-    //     currentPage.title = postFrontmatter.title
-    //     currentPage.path = postNodeFields.slug
-    //     currentPage.chapter = postFrontmatter.chapter
-    //     currentPage.lessonNumber = postFrontmatter.lessonNumber
-    //   })
-    //
-    //   const chapterLessonsToRender = []
-    //   nodes[chapter].forEach(page => {
-    //     chapterLessonsToRender.push(
-    //       <LessonContainer>
-    //         <Link to={page.path}>
-    //           <li>
-    //             <span>
-    //               <p>{page.chapter}.{page.lessonNumber} &nbsp;</p>
-    //               <h6>{page.title}</h6>
-    //             </span>
-    //           </li>
-    //         </Link>
-    //       </LessonContainer>
-    //     )
-    //   })
-    //
-    //   nodeListItemsToRender.push(
-    //     <li className='chapter'>
-    //       <h5 className='tocHeading'>
-    //         {chapter.toUpperCase()}
-    //       </h5>
-    //       <ul className='chapterItems'>
-    //         {chapterLessonsToRender}
-    //       </ul>
-    //     </li>
-    //   )
-    // })
-  // }
-
-
-    // const postNodes = []
-    // posts.forEach(post => {
-    //   if (post.node.frontmatter.type === type) {
-    //     const postNode = {
-    //       title: post.node.frontmatter.title,
-    //       path: post.node.fields.slug,
-    //       lessonNumber: post.node.frontmatter.lesson,
-    //       chapter: post.node.frontmatter.chapter
-    //     }
-    //     postNodes.push(postNode)
-    //   }
-    // })
-    //
-    // const postNodeChapters = [];
-    // postNodes.forEach(post => {
-    //   if (postNodeChapters[post.chapter]) {
-    //     postNodeChapters[post.chapter].push(post)
-    //   } else {
-    //     postNodeChapters[post.chapter] = [post]
-    //   }
-    // })
-  //
-  //   postNodeChapters.forEach(chapter => {
-  //     chapter.sort((a, b) => a.lessonNumber > b.lessonNumber)
-  //   })
-  //   return postNodeChapters
-  // }
-  //
-  // nodeListItems() {
-  //   const postNodeChapters = this.buildNodes()
-  //   const listItems = []
-  //   const chapterTitles = this.props.chapterTitles
-  //   postNodeChapters.forEach((chapter, idx) => {
-  //     const chapterLessons = []
-  //     chapter.forEach(node => {
-  //       chapterLessons.push(
-  //         <LessonContainer>
-  //           <Link to={node.path}>
-  //             <li>
-  //               <span>
-  //                 <p>{node.chapter}.{node.lessonNumber} &nbsp;</p>
-  //                 <h6>{node.title}</h6>
-  //               </span>
-  //             </li>
-  //           </Link>
-  //         </LessonContainer>
-  //       )
-  //     })
-  //     listItems.push(
-  //       <li className='chapter'>
-  //         <h5 className='tocHeading'>
-  //           {chapterTitles[idx].toUpperCase()}
-  //         </h5>
-  //         <ul className='chapterItems'>
-  //           {chapterLessons}
-  //         </ul>
-  //       </li>
-  //     )
-  //   })
-  //   return listItems
-  // }
-
   render() {
-    const { posts } = this.props;
+    const posts = this.props.posts.chapters;
     this.nodeListItemsToRender = [];
     this.buildNodes(posts, 0);
     return (
@@ -200,7 +119,7 @@ class TableOfContents extends React.Component {
 const TableOfContentsContainer = styled.div`
   padding: ${props => props.theme.sitePadding};
 
-  & > ul, .chapterItems {
+  & > ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -212,11 +131,7 @@ const TableOfContentsContainer = styled.div`
     margin: 0;
   }
   
-  .tocHeading {
-     font-weight: 200;
-     color: ${props => props.theme.brand};
-     margin-bottom: 10px;
-  }
+  .tocHeading 
 `
 
 const LessonLIContainer = styled.div`
@@ -237,9 +152,18 @@ const LessonLIContainer = styled.div`
   }
 `
 
-const ChapterLIContainer = styled.li``
+const ChapterLIContainer = styled.li`
 
-const SubchapterLIContainer = styled.li``
+
+`
+
+const SubchapterLIContainer = styled.li`
+  h5 {
+     font-weight: 200;
+     color: ${props => props.theme.brand};
+     margin-bottom: 10px;
+  }
+`
 
 export default TableOfContents
 
