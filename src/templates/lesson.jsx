@@ -9,7 +9,7 @@ import TableOfContents from "../components/Layout/TableOfContents";
 
 export default class LessonTemplate extends React.Component {
   render() {
-    const { slug } = this.props.pathContext;
+    const {slug} = this.props.pathContext;
     const postNode = this.props.data.postBySlug;
     const post = postNode.frontmatter;
     if (!post.id) {
@@ -23,16 +23,14 @@ export default class LessonTemplate extends React.Component {
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
+        <SEO postPath={slug} postNode={postNode} postSEO/>
         <BodyGrid>
           <HeaderContainer>
-            <SiteHeader location={this.props.location} />
+            <SiteHeader location={this.props.location}/>
           </HeaderContainer>
           <ToCContainer>
             <TableOfContents
-              posts={this.props.data.allPostTitles.edges}
-              contentsType="lesson"
-              chapterTitles={config.toCChapters}
+              posts={this.props.data.tableOfContents}
             />
           </ToCContainer>
           <BodyContainer>
@@ -40,7 +38,7 @@ export default class LessonTemplate extends React.Component {
               <h1>
                 {post.title}
               </h1>
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+              <div dangerouslySetInnerHTML={{__html: postNode.html}}/>
             </div>
           </BodyContainer>
         </BodyGrid>
@@ -89,36 +87,55 @@ const ToCContainer = styled.div`
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query LessonBySlug($slug: String!) {
-    allPostTitles: allMarkdownRemark{
-        edges {
-          node {
+    query LessonBySlug($slug: String!) {
+        allPostTitles: allMarkdownRemark{
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        lesson
+                        chapter
+                        type
+                    }
+                    fields {
+                        slug
+                    }
+                }
+            }
+        }
+        postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
+            html
+            timeToRead
+            excerpt
             frontmatter {
-              title
-              lesson
-              chapter
-              type
+                title
+                cover
+                date
+                category
+                tags
             }
             fields {
-              slug
+                slug
             }
-          }
         }
-      }
-      postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
-        html
-        timeToRead
-        excerpt
-        frontmatter {
-          title
-          cover
-          date
-          category
-          tags
+        tableOfContents: lessonsJson{
+            chapters{
+                one{
+                    subchapterone {
+                        label
+                        post{
+                            childMarkdownRemark{
+                                frontmatter {
+                                    title
+                                }
+                                fields {
+                                    slug
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-        fields {
-          slug
-        }
-      } 
-  }
+    }
 `;

@@ -1,0 +1,21 @@
+{
+  "id": "my-chapters",
+  "chapters": {
+    "one": {
+      "subchapterone": [
+        {
+          "label": "Lesson One",
+          "post": "./lesson_one.md"
+        },
+        {
+          "label": "Lesson Two",
+          "post": "./lesson_two.md"
+        },
+        {
+          "label": "Lesson Three",
+          "post": "./lesson_three.md"
+        }
+      ]
+    }
+  }
+}
