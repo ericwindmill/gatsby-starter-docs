@@ -1,36 +1,53 @@
 {
   "id": "table-of-contents",
-  "coolness": "very-cool",
-  "chapters": {
-    "one": {
-      "subchapter_one_one": [
+  "chapters": [
+    {
+      "title": "The first chapter",
+      "subchapters": [
         {
-          "post": "./lesson_one.md"
+          "title": "The rainbow",
+          "entries": [
+            {
+              "entry": "./lesson_one.md"
+            },
+            {
+              "entry": "./lesson_two.md"
+            },
+            {
+              "entry": "./lesson_three.md"
+            }
+          ]
         },
         {
-          "post": "./lesson_two.md"
-        },
-        {
-          "post": "./lesson_three.md"
-        }
-      ],
-      "subchapter_one_two": [
-        {
-          "post": "./lesson_four.md"
+          "title": "The mountain",
+          "entries": [
+            {
+              "entry": "./lesson_four.md"
+            }
+          ]
         }
       ]
     },
-    "two": {
-      "subchapter_two_one": [
+    {
+      "title": "The second chapter",
+      "subchapters": [
         {
-          "post": "./lesson_five.md"
+          "title": "The village",
+          "entries": [
+            {
+              "entry": "./lesson_five.md"
+            }
+          ]
         }
       ]
     },
-    "three": [
-      {
-        "post": "./lesson_six.md"
-      }
-    ]
-  }
+    {
+      "title": "The third chapter",
+      "entries": [
+        {
+          "entry": "./lesson_six.md"
+        }
+      ]
+    }
+  ]
 }

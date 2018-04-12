@@ -31,7 +31,7 @@ export default class LessonTemplate extends React.Component {
           </HeaderContainer>
           <ToCContainer>
             <TableOfContents
-              posts={this.props.data.tableOfContents}
+              chapters={this.props.data.tableOfContents.chapters}
             />
           </ToCContainer>
           <BodyContainer>
@@ -105,66 +105,23 @@ const ToCContainer = styled.div`
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query LessonBySlug($slug: String!) {
-  postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
-    html
-    timeToRead
-    excerpt
-    frontmatter {
-      title
-      cover
-      date
-      category
-      tags
+    postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      timeToRead
+      excerpt
+      frontmatter {
+        title
+        cover
+        date
+        category
+        tags
+      }
     }
-  }
-  tableOfContents: lessonsJson {
-      coolness
+    tableOfContents: lessonsJson {
       chapters {
-        one {
-          subchapter_one_one {
-            post {
-              id
-              childMarkdownRemark {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
-              }
-            }
-          }
-          subchapter_one_two {
-            post {
-              id
-              childMarkdownRemark {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
-              }
-            }
-          }
-        }
-        two {
-          subchapter_two_one {
-            post {
-              id
-              childMarkdownRemark {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
-              }
-            }
-          }
-        }
-        three {
-          post {
+        title
+        entries {
+          entry {
             id
             childMarkdownRemark {
               fields {
@@ -176,7 +133,23 @@ export const pageQuery = graphql`
             }
           }
         }
+        subchapters {
+          title
+          entries {
+            entry {
+              id
+              childMarkdownRemark {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
-`;
+`
