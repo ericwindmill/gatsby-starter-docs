@@ -18,7 +18,6 @@ const SiteContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   background: ${props => props.theme.brand};
-  height: 100%;
   padding:  25px;
 `
 
