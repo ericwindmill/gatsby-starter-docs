@@ -1,7 +1,6 @@
-import React from "react"
-import Link from 'gatsby-link'
-import styled from 'styled-components'
-
+import React from "react";
+import Link from "gatsby-link";
+import styled from "styled-components";
 
 class TableOfContents extends React.Component {
   constructor() {
@@ -11,15 +10,16 @@ class TableOfContents extends React.Component {
   }
 
   formatChapterTitle(title) {
-    return title.split('_').map(word => word[0].toUpperCase() + word.substring(1)).join(' ');
+    return title
+      .split("_")
+      .map(word => word[0].toUpperCase() + word.substring(1))
+      .join(" ");
   }
 
   addSubchapterJSX(node) {
     this.nodeListItemsToRender.push(
       <SubchapterLIContainer key={node}>
-        <h5>
-          {this.formatChapterTitle(node)}
-        </h5>
+        <h5>{this.formatChapterTitle(node)}</h5>
       </SubchapterLIContainer>
     );
   }
@@ -27,11 +27,9 @@ class TableOfContents extends React.Component {
   addChapterJSX(node) {
     this.nodeListItemsToRender.push(
       <ChapterLIContainer key={node}>
-        <h5>
-          {this.formatChapterTitle(node)}
-        </h5>
+        <h5>{this.formatChapterTitle(node)}</h5>
       </ChapterLIContainer>
-    )
+    );
   }
 
   buildLessonItemNodes(nodeArray) {
@@ -44,8 +42,8 @@ class TableOfContents extends React.Component {
             </li>
           </Link>
         </LessonLIContainer>
-      )
-    })
+      );
+    });
   }
 
   buildChapterNodes(node) {
@@ -57,7 +55,6 @@ class TableOfContents extends React.Component {
       this.addSubchapterJSX(node);
     }
   }
-
 
   // Level matters because sub-chapter <li> and chapter <li>s are styled differently
   //
@@ -75,7 +72,7 @@ class TableOfContents extends React.Component {
   buildNodes(nodes) {
     function getNextNode(postNodes, node) {
       const keys = Object.keys(nodes);
-      const nextIndex = keys.indexOf(node) +1;
+      const nextIndex = keys.indexOf(node) + 1;
       return keys[nextIndex];
     }
 
@@ -89,9 +86,9 @@ class TableOfContents extends React.Component {
           this.currentLevel -= 1;
         }
       } else {
-        this.buildChapterNodes(node)
+        this.buildChapterNodes(node);
         this.currentLevel += 1;
-        this.buildNodes(nodes[node])
+        this.buildNodes(nodes[node]);
       }
     });
   }
@@ -102,11 +99,9 @@ class TableOfContents extends React.Component {
     this.buildNodes(posts);
     return (
       <TableOfContentsContainer>
-        <ul>
-          {this.nodeListItemsToRender}
-        </ul>
+        <ul>{this.nodeListItemsToRender}</ul>
       </TableOfContentsContainer>
-    )
+    );
   }
 }
 
@@ -118,14 +113,13 @@ const TableOfContentsContainer = styled.div`
     padding: 0;
     margin: 0;
   }
-  
-`
+`;
 
 const LessonLIContainer = styled.div`
-
   li {
     margin: 0;
-    h6, p {
+    h6,
+    p {
       display: inline-block;
       font-weight: 200;
       color: black;
@@ -141,25 +135,23 @@ const LessonLIContainer = styled.div`
       }
     }
   }
-`
+`;
 
 const ChapterLIContainer = styled.li`
   h5 {
-     font-weight: 200;
-     font-size: 2.8rem;
-     color: ${props => props.theme.brand};
-     margin-bottom: 10px;
+    font-weight: 200;
+    font-size: 2.8rem;
+    color: ${props => props.theme.brand};
+    margin-bottom: 10px;
   }
-
-`
+`;
 
 const SubchapterLIContainer = styled.li`
   h5 {
-     font-weight: 600;
-     color: black;
-     margin-bottom: 5px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 5px;
   }
-`
+`;
 
-export default TableOfContents
-
+export default TableOfContents;
