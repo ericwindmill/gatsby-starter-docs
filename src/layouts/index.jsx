@@ -1,11 +1,10 @@
 import React from "react";
 import Helmet from "react-helmet";
-import styled, {ThemeProvider} from "styled-components"
+import styled, { ThemeProvider } from "styled-components";
 import config from "../../data/SiteConfig";
 import "./css/index.css";
-import "./css/prism-okaidia.css"
-import theme from './theme'
-
+import "./css/prism-okaidia.css";
+import theme from "./theme";
 
 export default class MainLayout extends React.Component {
   getLocalTitle() {
@@ -51,9 +50,7 @@ export default class MainLayout extends React.Component {
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        <ThemeProvider theme={theme}>
-          {children()}
-        </ThemeProvider>
+        <ThemeProvider theme={theme}>{children()}</ThemeProvider>
       </div>
     );
   }
