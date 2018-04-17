@@ -2,8 +2,8 @@ const path = require("path");
 const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
 
-exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
-  const {createNodeField} = boundActionCreators;
+exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
+  const { createNodeField } = boundActionCreators;
   let slug;
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
@@ -26,12 +26,12 @@ exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
     } else {
       slug = `/${parsedFilePath.dir}/`;
     }
-    createNodeField({node, name: "slug", value: slug});
+    createNodeField({ node, name: "slug", value: slug });
   }
 };
 
-exports.createPages = ({graphql, boundActionCreators}) => {
-  const {createPage} = boundActionCreators;
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
     const postPage = path.resolve("src/templates/post.jsx");
@@ -41,24 +41,24 @@ exports.createPages = ({graphql, boundActionCreators}) => {
     resolve(
       graphql(
         `
-        {
-          allMarkdownRemark {
-            edges {
-              node {
-                frontmatter {
-                  title
-                  type
-                  category
-                  tags
-                }
-                fields {
-                  slug
+          {
+            allMarkdownRemark {
+              edges {
+                node {
+                  frontmatter {
+                    title
+                    type
+                    category
+                    tags
+                  }
+                  fields {
+                    slug
+                  }
                 }
               }
             }
           }
-        }
-      `
+        `
       ).then(result => {
         if (result.errors) {
           console.log(result.errors);
@@ -69,7 +69,6 @@ exports.createPages = ({graphql, boundActionCreators}) => {
         const categorySet = new Set();
 
         result.data.allMarkdownRemark.edges.forEach(edge => {
-
           if (edge.node.frontmatter.tags) {
             edge.node.frontmatter.tags.forEach(tag => {
               tagSet.add(tag);
@@ -80,25 +79,24 @@ exports.createPages = ({graphql, boundActionCreators}) => {
             categorySet.add(edge.node.frontmatter.category);
           }
 
-          if (edge.node.frontmatter.type === 'post') {
+          if (edge.node.frontmatter.type === "post") {
             createPage({
               path: edge.node.fields.slug,
               component: postPage,
               context: {
-                slug: edge.node.fields.slug,
+                slug: edge.node.fields.slug
               }
-            })
+            });
           } else {
             createPage({
               path: edge.node.fields.slug,
               component: lessonPage,
               context: {
-                slug: edge.node.fields.slug,
+                slug: edge.node.fields.slug
               }
-            })
+            });
           }
-        })
-
+        });
 
         const categoryList = Array.from(categorySet);
         categoryList.forEach(category => {
@@ -115,7 +113,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
   });
 };
 
-exports.modifyWebpackConfig = ({config, stage}) => {
+exports.modifyWebpackConfig = ({ config, stage }) => {
   if (stage === "build-javascript") {
     config.plugin("Lodash", webpackLodashPlugin, null);
   }
