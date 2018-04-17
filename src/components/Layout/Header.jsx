@@ -17,7 +17,7 @@ const SiteContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   background: ${props => props.theme.brand};
-  padding:  25px;
-`
+  padding: 25px;
+`;
 
 export default MainHeader;
