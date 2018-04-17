@@ -14,7 +14,7 @@ const Links = ({ entries, index }) => (
   </StyledLinkList>
 );
 
-const Subchapters = ({ chapters, index }) => (
+const Chapters = ({ chapters, index }) => (
   <StyledSubchapterList>
     {chapters.map(({ entries, title }, key) => (
       <li key={`subchapter${index}${key}`}>
@@ -25,20 +25,13 @@ const Subchapters = ({ chapters, index }) => (
   </StyledSubchapterList>
 );
 
-const chapterMapper = ({ subchapters, entries, title }, index) => {
-  const AdditionalElements = () => {
-    if (subchapters) {
-      return <Subchapters chapters={subchapters} index={index} />;
-    }
-    return <Links entries={entries} index={index} />;
-  };
-  return (
-    <li key={`chapter${index}`}>
-      <ChapterTitle>{title}</ChapterTitle>
-      <AdditionalElements />
-    </li>
-  );
-};
+const chapterMapper = ({ chapters, entries, title }, index) => (
+  <li key={`chapter${index}`}>
+    <ChapterTitle>{title}</ChapterTitle>
+    { chapters && <Chapters chapters={chapters} index={index} /> }
+    { entries && <Links entries={entries} index={index} /> }
+  </li>
+)
 
 const TableOfContents = ({ chapters }) => (
   <StyledChapterList>{chapters.map(chapterMapper, [])}</StyledChapterList>

@@ -3,7 +3,7 @@
   "chapters": [
     {
       "title": "The first chapter",
-      "subchapters": [
+      "chapters": [
         {
           "title": "The rainbow",
           "entries": [
@@ -16,7 +16,22 @@
             {
               "entry": "./lesson_three.md"
             }
-          ]
+          ],
+          "chapters": [
+            {
+              "title": "The rainbow",
+              "entries": [
+                {
+                  "entry": "./lesson_one.md"
+                },
+                {
+                  "entry": "./lesson_two.md"
+                },
+                {
+                  "entry": "./lesson_three.md"
+                }
+              ]
+            }]
         },
         {
           "title": "The mountain",
@@ -30,7 +45,7 @@
     },
     {
       "title": "The second chapter",
-      "subchapters": [
+      "chapters": [
         {
           "title": "The village",
           "entries": [

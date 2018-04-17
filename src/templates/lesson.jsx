@@ -9,7 +9,7 @@ import config from "../../data/SiteConfig";
 import TableOfContents from "../components/Layout/TableOfContents";
 
 export default class LessonTemplate extends React.Component {
-  render() {
+  render () {
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.postBySlug;
     const post = postNode.frontmatter;
@@ -24,10 +24,10 @@ export default class LessonTemplate extends React.Component {
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
+        <SEO postPath={slug} postNode={postNode} postSEO/>
         <BodyGrid>
           <HeaderContainer>
-            <SiteHeader location={this.props.location} />
+            <SiteHeader location={this.props.location}/>
           </HeaderContainer>
           <ToCContainer>
             <TableOfContents
@@ -37,7 +37,7 @@ export default class LessonTemplate extends React.Component {
           <BodyContainer>
             <div>
               <h1>{post.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+              <div dangerouslySetInnerHTML={{ __html: postNode.html }}/>
             </div>
           </BodyContainer>
         </BodyGrid>
@@ -102,52 +102,68 @@ const ToCContainer = styled.div`
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query LessonBySlug($slug: String!) {
-    postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      timeToRead
-      excerpt
-      frontmatter {
-        title
-        cover
-        date
-        category
-        tags
-      }
-    }
-    tableOfContents: lessonsJson {
-      chapters {
-        title
-        entries {
-          entry {
-            id
-            childMarkdownRemark {
-              fields {
-                slug
-              }
-              frontmatter {
+    query LessonBySlug($slug: String!) {
+        postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
+            html
+            timeToRead
+            excerpt
+            frontmatter {
                 title
-              }
+                cover
+                date
+                category
+                tags
             }
-          }
         }
-        subchapters {
-          title
-          entries {
-            entry {
-              id
-              childMarkdownRemark {
-                fields {
-                  slug
+        tableOfContents: lessonsJson {
+            chapters {
+                title
+                entries {
+                    entry {
+                        id
+                        childMarkdownRemark {
+                            fields {
+                                slug
+                            }
+                            frontmatter {
+                                title
+                            }
+                        }
+                    }
                 }
-                frontmatter {
-                  title
+                chapters {
+                    title
+                    entries {
+                        entry {
+                            id
+                            childMarkdownRemark {
+                                fields {
+                                    slug
+                                }
+                                frontmatter {
+                                    title
+                                }
+                            }
+                        }
+                    }
+                    chapters {
+                        title
+                        entries {
+                            entry {
+                                id
+                                childMarkdownRemark {
+                                    fields {
+                                        slug
+                                    }
+                                    frontmatter {
+                                        title
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-              }
             }
-          }
         }
-      }
     }
-  }
 `;
