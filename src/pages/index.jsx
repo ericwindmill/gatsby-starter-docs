@@ -6,19 +6,22 @@ import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
 import CtaButton from "../components/CtaButton";
 import Navigation from "../components/Layout/Navigation";
+import PostListing from "../components/PostListing/PostListing";
 
 class Index extends React.Component {
   render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const allSEOMarkdown = this.props.data.allMarkdown.edges;
+    const postsForListing = this.props.data.posts.edges;
+
     return (
       <div className="index-container">
-        <Helmet title={config.siteTitle} />
-        <SEO postEdges={postEdges} />
+        <Helmet title={config.siteTitle}/>
+        <SEO postEdges={allSEOMarkdown}/>
         <main>
           <IndexHeadContainer>
-            <Navigation />
+            <Navigation/>
             <Hero>
-              <img src={config.siteLogo} width="150px" />
+              <img src={config.siteLogo} width="150px"/>
               <h1>{config.siteTitle}</h1>
               <h4>{config.siteDescription}</h4>
             </Hero>
@@ -61,8 +64,29 @@ const BodyContainer = styled.div`
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(
+    allMarkdown: allMarkdownRemark(
       limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          excerpt
+          timeToRead
+          frontmatter {
+            title
+            tags
+            cover
+            date
+          }
+        }
+      }
+    }
+    posts: allMarkdownRemark(
+      limit: 2000
+      filter: {frontmatter: {type: {eq: "post"}}}
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

@@ -13,7 +13,7 @@ import SiteHeader from "../components/Layout/Header";
 
 export default class PostTemplate extends React.Component {
   render() {
-    const { slug } = this.props.pathContext;
+    const {slug} = this.props.pathContext;
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
     if (!post.id) {
@@ -27,20 +27,20 @@ export default class PostTemplate extends React.Component {
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
+        <SEO postPath={slug} postNode={postNode} postSEO/>
         <BodyGrid>
           <HeaderContainer>
-            <SiteHeader location={this.props.location} />
+            <SiteHeader location={this.props.location}/>
           </HeaderContainer>
           <BodyContainer>
             <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <div dangerouslySetInnerHTML={{__html: postNode.html}}/>
             <div className="post-meta">
-              <PostTags tags={post.tags} />
-              <SocialLinks postPath={slug} postNode={postNode} />
+              <PostTags tags={post.tags}/>
+              <SocialLinks postPath={slug} postNode={postNode}/>
             </div>
-            <UserInfo config={config} />
-            <Disqus postNode={postNode} />
+            <UserInfo config={config}/>
+            <Disqus postNode={postNode}/>
           </BodyContainer>
         </BodyGrid>
       </div>
@@ -61,7 +61,7 @@ const BodyContainer = styled.div`
   width: 100%;
   padding: ${props => props.theme.sitePadding};
 
-  & > div {
+  & > div, h1 {
     max-width: ${props => props.theme.contentWidthLaptop};
     margin: auto;
   }
