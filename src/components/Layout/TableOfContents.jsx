@@ -1,19 +1,19 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled from "styled-components";
+import React from 'react'
+import Link from 'gatsby-link'
+import styled from 'styled-components'
 
 class TableOfContents extends React.Component {
   constructor() {
-    super();
-    this.nodeListItemsToRender = [];
-    this.currentLevel = 0;
+    super()
+    this.nodeListItemsToRender = []
+    this.currentLevel = 0
   }
 
   formatChapterTitle(title) {
     return title
-      .split("_")
+      .split('_')
       .map(word => word[0].toUpperCase() + word.substring(1))
-      .join(" ");
+      .join(' ')
   }
 
   addSubchapterJSX(node) {
@@ -21,7 +21,7 @@ class TableOfContents extends React.Component {
       <SubchapterLIContainer key={node}>
         <h5>{this.formatChapterTitle(node)}</h5>
       </SubchapterLIContainer>
-    );
+    )
   }
 
   addChapterJSX(node) {
@@ -29,7 +29,7 @@ class TableOfContents extends React.Component {
       <ChapterLIContainer key={node}>
         <h5>{this.formatChapterTitle(node)}</h5>
       </ChapterLIContainer>
-    );
+    )
   }
 
   buildLessonItemNodes(nodeArray) {
@@ -42,17 +42,17 @@ class TableOfContents extends React.Component {
             </li>
           </Link>
         </LessonLIContainer>
-      );
-    });
+      )
+    })
   }
 
   buildChapterNodes(node) {
     // If this is a Chapter (and not a subchapter)
     if (this.currentLevel === 0) {
-      this.addChapterJSX(node);
+      this.addChapterJSX(node)
       // Else it's a SubChapter
     } else {
-      this.addSubchapterJSX(node);
+      this.addSubchapterJSX(node)
     }
   }
 
@@ -71,37 +71,37 @@ class TableOfContents extends React.Component {
   //
   buildNodes(nodes) {
     function getNextNode(postNodes, node) {
-      const keys = Object.keys(nodes);
-      const nextIndex = keys.indexOf(node) + 1;
-      return keys[nextIndex];
+      const keys = Object.keys(nodes)
+      const nextIndex = keys.indexOf(node) + 1
+      return keys[nextIndex]
     }
 
     Object.keys(nodes).forEach(node => {
-      const nextNode = getNextNode(nodes, node);
+      const nextNode = getNextNode(nodes, node)
       if (Array.isArray(nodes[node])) {
         // Add the Lowest Level Chapter Name (Title of Array):
-        this.buildChapterNodes(node);
-        this.buildLessonItemNodes(nodes[node]);
+        this.buildChapterNodes(node)
+        this.buildLessonItemNodes(nodes[node])
         if (nextNode === undefined) {
-          this.currentLevel -= 1;
+          this.currentLevel -= 1
         }
       } else {
-        this.buildChapterNodes(node);
-        this.currentLevel += 1;
-        this.buildNodes(nodes[node]);
+        this.buildChapterNodes(node)
+        this.currentLevel += 1
+        this.buildNodes(nodes[node])
       }
-    });
+    })
   }
 
   render() {
-    const posts = this.props.posts.chapters;
-    this.nodeListItemsToRender = [];
-    this.buildNodes(posts);
+    const posts = this.props.posts.chapters
+    this.nodeListItemsToRender = []
+    this.buildNodes(posts)
     return (
       <TableOfContentsContainer>
         <ul>{this.nodeListItemsToRender}</ul>
       </TableOfContentsContainer>
-    );
+    )
   }
 }
 
@@ -113,7 +113,7 @@ const TableOfContentsContainer = styled.div`
     padding: 0;
     margin: 0;
   }
-`;
+`
 
 const LessonLIContainer = styled.div`
   li {
@@ -135,7 +135,7 @@ const LessonLIContainer = styled.div`
       }
     }
   }
-`;
+`
 
 const ChapterLIContainer = styled.li`
   h5 {
@@ -144,7 +144,7 @@ const ChapterLIContainer = styled.li`
     color: ${props => props.theme.brand};
     margin-bottom: 10px;
   }
-`;
+`
 
 const SubchapterLIContainer = styled.li`
   h5 {
@@ -152,6 +152,6 @@ const SubchapterLIContainer = styled.li`
     color: black;
     margin-bottom: 5px;
   }
-`;
+`
 
-export default TableOfContents;
+export default TableOfContents
