@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 class Footer extends React.Component {
   render() {
@@ -7,8 +7,8 @@ class Footer extends React.Component {
       <section>
         <h1>Footer</h1>
       </section>
-    );
+    )
   }
 }
 
-export default Footer;
+export default Footer
