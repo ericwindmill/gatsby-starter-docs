@@ -100,7 +100,7 @@ const ToCContainer = styled.div`
   }
 `
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query LessonBySlug($slug: String!) {
     postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {

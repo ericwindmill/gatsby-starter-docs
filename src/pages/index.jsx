@@ -61,7 +61,7 @@ const BodyContainer = styled.div`
   margin: 0 auto;
 `
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdown: allMarkdownRemark(
