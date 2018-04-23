@@ -9,21 +9,12 @@
           "entries": [
             {
               "entry": "./lesson_one.md"
-            },
-            {
-              "entry": "./lesson_two.md"
-            },
-            {
-              "entry": "./lesson_three.md"
             }
           ],
           "chapters": [
             {
               "title": "First subchapter in first subchapter of first main chapter",
               "entries": [
-                {
-                  "entry": "./lesson_one.md"
-                },
                 {
                   "entry": "./lesson_two.md"
                 },

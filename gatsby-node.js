@@ -37,7 +37,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const postPage = path.resolve("src/templates/post.jsx");
     const lessonPage = path.resolve("src/templates/lesson.jsx");
     const categoryPage = path.resolve("src/templates/category.jsx");
-    const tagPage = path.resolve("src/templates/tag.jsx");
     resolve(
       graphql(
         `
@@ -61,7 +60,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         `
       ).then(result => {
         if (result.errors) {
-          console.log(result.errors);
           reject(result.errors);
         }
 

@@ -1,9 +1,6 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-
-import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 import MainHeader from '../components/Layout/Header'
 import About from '../components/About/About'

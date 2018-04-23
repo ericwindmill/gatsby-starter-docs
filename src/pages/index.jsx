@@ -6,12 +6,10 @@ import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 import CtaButton from '../components/CtaButton'
 import Navigation from '../components/Layout/Navigation'
-import PostListing from '../components/PostListing/PostListing'
 
 class Index extends React.Component {
   render() {
     const allSEOMarkdown = this.props.data.allMarkdown.edges
-    const postsForListing = this.props.data.posts.edges
 
     return (
       <div className="index-container">
@@ -21,7 +19,7 @@ class Index extends React.Component {
           <IndexHeadContainer>
             <Navigation />
             <Hero>
-              <img src={config.siteLogo} width="150px" />
+              <img src={config.siteLogo} width="150px" alt="" />
               <h1>{config.siteTitle}</h1>
               <h4>{config.siteDescription}</h4>
             </Hero>

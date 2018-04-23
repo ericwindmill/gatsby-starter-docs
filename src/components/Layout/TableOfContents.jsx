@@ -2,10 +2,12 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+/* eslint react/no-array-index-key: "off" */
+
 const Links = ({ entries }) => (
   <StyledLinkList>
     {entries.map(({ entry }, key) => (
-      <EntryListItem key={`link${key}`}>
+      <EntryListItem key={key}>
         <Link to={entry.childMarkdownRemark.fields.slug}>
           <EntryTitle>{entry.childMarkdownRemark.frontmatter.title}</EntryTitle>
         </Link>
@@ -16,22 +18,22 @@ const Links = ({ entries }) => (
 
 const ChapterList = ({ chapters, entries, title, level = 0 }) => (
   <StyledChapterList>
-    {title && <ChapterListItem key={`chapter${level}`}>
+    {title && <ChapterListItem key={`${title}${level}`}>
       <ChapterTitle level={level}>{title}</ChapterTitle>
     </ChapterListItem>}
     <ChapterListItem>
       {entries && <Links entries={entries} />}
     </ChapterListItem>
     <ChapterListItem>
-      {chapters && chapters.map(chapter => (
-        <ChapterList {...chapter} level={level + 1} />
+      {chapters && chapters.map((chapter, index) => (
+        <ChapterList {...chapter} level={level + 1} key={`${index}`} />
       ))}
     </ChapterListItem>
   </StyledChapterList>
 )
 
 const TableOfContents = ({ chapters }) => (
-  <TOCWrapper>{chapters.map(chapter => <ChapterList {...chapter} />)}</TOCWrapper>
+  <TOCWrapper>{chapters.map((chapter, index) => <ChapterList {...chapter} key={index} />)}</TOCWrapper>
 )
 
 export default TableOfContents
