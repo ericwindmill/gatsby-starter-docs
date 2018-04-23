@@ -2,10 +2,10 @@
   "id": "table-of-contents",
   "chapters": [
     {
-      "title": "The first chapter",
+      "title": "First main chapter",
       "chapters": [
         {
-          "title": "The rainbow",
+          "title": "First subchapter of first main chapter",
           "entries": [
             {
               "entry": "./lesson_one.md"
@@ -19,7 +19,7 @@
           ],
           "chapters": [
             {
-              "title": "The rainbow",
+              "title": "First subchapter in first subchapter of first main chapter",
               "entries": [
                 {
                   "entry": "./lesson_one.md"
@@ -34,7 +34,7 @@
             }]
         },
         {
-          "title": "The mountain",
+          "title": "Second subchapter of main chapter",
           "entries": [
             {
               "entry": "./lesson_four.md"
@@ -44,10 +44,10 @@
       ]
     },
     {
-      "title": "The second chapter",
+      "title": "Second main chapter",
       "chapters": [
         {
-          "title": "The village",
+          "title": "First subchapter of second main chapter",
           "entries": [
             {
               "entry": "./lesson_five.md"
@@ -57,7 +57,7 @@
       ]
     },
     {
-      "title": "The third chapter",
+      "title": "Third main chapter",
       "entries": [
         {
           "entry": "./lesson_six.md"
