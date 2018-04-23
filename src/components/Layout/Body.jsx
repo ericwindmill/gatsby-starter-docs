@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
-import PostListing from "../PostListing/PostListing";
+import PostListing from '../PostListing/PostListing'
 
 const Container = styled.div`
   padding: ${props => props.theme.sitePadding};
-`;
+`
 
 class Body extends React.Component {
   render() {
@@ -14,8 +14,8 @@ class Body extends React.Component {
         <h1>Body</h1>
         <PostListing />
       </Container>
-    );
+    )
   }
 }
 
-export default Body;
+export default Body

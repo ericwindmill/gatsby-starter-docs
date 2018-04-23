@@ -1,7 +1,7 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled from "styled-components";
-import UserLinks from "../UserLinks";
+import React from 'react'
+import Link from 'gatsby-link'
+import styled from 'styled-components'
+import UserLinks from '../UserLinks'
 
 const NavContainer = styled.div`
   display: flex;
@@ -29,7 +29,7 @@ const NavContainer = styled.div`
       display: none;
     }
   }
-`;
+`
 
 class Navigation extends React.Component {
   render() {
@@ -37,24 +37,24 @@ class Navigation extends React.Component {
       <NavContainer>
         <section>
           <Link className="nav-link" to="/">
-            {" "}
-            HOME{" "}
+            {' '}
+            HOME{' '}
           </Link>
           <Link className="nav-link" to="/lesson-one">
-            {" "}
-            DOCS{" "}
+            {' '}
+            DOCS{' '}
           </Link>
           <Link className="nav-link" to="/about">
-            {" "}
-            ABOUT{" "}
+            {' '}
+            ABOUT{' '}
           </Link>
         </section>
         <span>
           <UserLinks />
         </span>
       </NavContainer>
-    );
+    )
   }
 }
 
-export default Navigation;
+export default Navigation

@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { ShareButtons, ShareCounts, generateShareIcon } from "react-share";
-import config from "../../../data/SiteConfig";
-import "./SocialLinks.css";
+import React, { Component } from 'react'
+import { ShareButtons, ShareCounts, generateShareIcon } from 'react-share'
+import config from '../../../data/SiteConfig'
+import './SocialLinks.css'
 
 class SocialLinks extends Component {
   render() {
-    const { postNode, postPath, mobile } = this.props;
-    const post = postNode.frontmatter;
-    const url = config.siteUrl + config.pathPrefix + postPath;
+    const { postNode, postPath, mobile } = this.props
+    const post = postNode.frontmatter
+    const url = config.siteUrl + config.pathPrefix + postPath
     const {
       FacebookShareButton,
       GooglePlusShareButton,
@@ -15,22 +15,22 @@ class SocialLinks extends Component {
       TwitterShareButton,
       TelegramShareButton,
       RedditShareButton
-    } = ShareButtons;
+    } = ShareButtons
     const {
       FacebookShareCount,
       GooglePlusShareCount,
       LinkedinShareCount,
       RedditShareCount
-    } = ShareCounts;
+    } = ShareCounts
 
-    const FacebookIcon = generateShareIcon("facebook");
-    const TwitterIcon = generateShareIcon("twitter");
-    const TelegramIcon = generateShareIcon("telegram");
-    const GooglePlusIcon = generateShareIcon("google");
-    const LinkedinIcon = generateShareIcon("linkedin");
-    const RedditIcon = generateShareIcon("reddit");
-    const iconSize = mobile ? 36 : 48;
-    const filter = count => (count > 0 ? count : "");
+    const FacebookIcon = generateShareIcon('facebook')
+    const TwitterIcon = generateShareIcon('twitter')
+    const TelegramIcon = generateShareIcon('telegram')
+    const GooglePlusIcon = generateShareIcon('google')
+    const LinkedinIcon = generateShareIcon('linkedin')
+    const RedditIcon = generateShareIcon('reddit')
+    const iconSize = mobile ? 36 : 48
+    const filter = count => (count > 0 ? count : '')
 
     return (
       <div className="social-links">
@@ -74,8 +74,8 @@ class SocialLinks extends Component {
           <TelegramIcon round size={iconSize} />
         </TelegramShareButton>
       </div>
-    );
+    )
   }
 }
 
-export default SocialLinks;
+export default SocialLinks

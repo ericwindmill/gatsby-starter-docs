@@ -1,33 +1,33 @@
-import React from "react";
-import Helmet from "react-helmet";
-import styled from "styled-components";
-import Link from "gatsby-link";
+import React from 'react'
+import Helmet from 'react-helmet'
+import styled from 'styled-components'
+import Link from 'gatsby-link'
 
-import SEO from "../components/SEO";
-import SiteHeader from "../components/Layout/Header";
-import config from "../../data/SiteConfig";
-import TableOfContents from "../components/Layout/TableOfContents";
+import SEO from '../components/SEO'
+import SiteHeader from '../components/Layout/Header'
+import config from '../../data/SiteConfig'
+import TableOfContents from '../components/Layout/TableOfContents'
 
 export default class LessonTemplate extends React.Component {
-  render () {
-    const { slug } = this.props.pathContext;
-    const postNode = this.props.data.postBySlug;
-    const post = postNode.frontmatter;
+  render() {
+    const { slug } = this.props.pathContext
+    const postNode = this.props.data.postBySlug
+    const post = postNode.frontmatter
     if (!post.id) {
-      post.id = slug;
+      post.id = slug
     }
     if (!post.id) {
-      post.category_id = config.postDefaultCategoryID;
+      post.category_id = config.postDefaultCategoryID
     }
     return (
       <div>
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO/>
+        <SEO postPath={slug} postNode={postNode} postSEO />
         <BodyGrid>
           <HeaderContainer>
-            <SiteHeader location={this.props.location}/>
+            <SiteHeader location={this.props.location} />
           </HeaderContainer>
           <ToCContainer>
             <TableOfContents
@@ -37,12 +37,12 @@ export default class LessonTemplate extends React.Component {
           <BodyContainer>
             <div>
               <h1>{post.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }}/>
+              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             </div>
           </BodyContainer>
         </BodyGrid>
       </div>
-    );
+    )
   }
 }
 
@@ -57,7 +57,7 @@ const BodyGrid = styled.div`
     flex-direction: column;
     height: inherit;
   }
-`;
+`
 
 const BodyContainer = styled.div`
   grid-column: 2 / 3;
@@ -78,7 +78,7 @@ const BodyContainer = styled.div`
   & > h1 {
     color: ${props => props.theme.accentDark};
   }
-`;
+`
 
 const HeaderContainer = styled.div`
   grid-column: 1 / 3;
@@ -87,7 +87,7 @@ const HeaderContainer = styled.div`
   @media screen and (max-width: 600px) {
     order: 1;
   }
-`;
+`
 
 const ToCContainer = styled.div`
   grid-column: 1 / 2;
@@ -98,72 +98,72 @@ const ToCContainer = styled.div`
     order: 3;
     overflow: inherit;
   }
-`;
+`
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-    query LessonBySlug($slug: String!) {
-        postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
-            html
-            timeToRead
-            excerpt
-            frontmatter {
-                title
-                cover
-                date
-                category
-                tags
-            }
-        }
-        tableOfContents: lessonsJson {
-            chapters {
-                title
-                entries {
-                    entry {
-                        id
-                        childMarkdownRemark {
-                            fields {
-                                slug
-                            }
-                            frontmatter {
-                                title
-                            }
-                        }
-                    }
-                }
-                chapters {
-                    title
-                    entries {
-                        entry {
-                            id
-                            childMarkdownRemark {
-                                fields {
-                                    slug
-                                }
-                                frontmatter {
-                                    title
-                                }
-                            }
-                        }
-                    }
-                    chapters {
-                        title
-                        entries {
-                            entry {
-                                id
-                                childMarkdownRemark {
-                                    fields {
-                                        slug
-                                    }
-                                    frontmatter {
-                                        title
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+  query LessonBySlug($slug: String!) {
+    postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      timeToRead
+      excerpt
+      frontmatter {
+        title
+        cover
+        date
+        category
+        tags
+      }
     }
-`;
+    tableOfContents: lessonsJson {
+      chapters {
+        title
+        entries {
+          entry {
+            id
+            childMarkdownRemark {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+        chapters {
+          title
+          entries {
+            entry {
+              id
+              childMarkdownRemark {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
+          chapters {
+            title
+            entries {
+              entry {
+                id
+                childMarkdownRemark {
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

@@ -1,27 +1,27 @@
-import React from "react";
-import Helmet from "react-helmet";
-import styled from "styled-components";
+import React from 'react'
+import Helmet from 'react-helmet'
+import styled from 'styled-components'
 
-import SEO from "../components/SEO";
-import config from "../../data/SiteConfig";
-import CtaButton from "../components/CtaButton";
-import Navigation from "../components/Layout/Navigation";
-import PostListing from "../components/PostListing/PostListing";
+import SEO from '../components/SEO'
+import config from '../../data/SiteConfig'
+import CtaButton from '../components/CtaButton'
+import Navigation from '../components/Layout/Navigation'
+import PostListing from '../components/PostListing/PostListing'
 
 class Index extends React.Component {
   render() {
-    const allSEOMarkdown = this.props.data.allMarkdown.edges;
-    const postsForListing = this.props.data.posts.edges;
+    const allSEOMarkdown = this.props.data.allMarkdown.edges
+    const postsForListing = this.props.data.posts.edges
 
     return (
       <div className="index-container">
-        <Helmet title={config.siteTitle}/>
-        <SEO postEdges={allSEOMarkdown}/>
+        <Helmet title={config.siteTitle} />
+        <SEO postEdges={allSEOMarkdown} />
         <main>
           <IndexHeadContainer>
-            <Navigation/>
+            <Navigation />
             <Hero>
-              <img src={config.siteLogo} width="150px"/>
+              <img src={config.siteLogo} width="150px" />
               <h1>{config.siteTitle}</h1>
               <h4>{config.siteDescription}</h4>
             </Hero>
@@ -30,36 +30,36 @@ class Index extends React.Component {
             <h2>A Gatsby Template for Content</h2>
             <p>
               Made for modern documentation sites. Table of Contents
-              automatically generated from markdown files.{" "}
+              automatically generated from markdown files.{' '}
             </p>
-            <CtaButton to={"/lesson-one"}>See Your First Post</CtaButton>
+            <CtaButton to={'/lesson-one'}>See Your First Post</CtaButton>
           </BodyContainer>
         </main>
       </div>
-    );
+    )
   }
 }
 
-export default Index;
+export default Index
 
 const IndexHeadContainer = styled.div`
   background: ${props => props.theme.brand};
   padding: ${props => props.theme.sitePadding};
   text-align: center;
-`;
+`
 
 const Hero = styled.div`
   padding: 50px 0;
   & > h1 {
     font-weight: 600;
   }
-`;
+`
 
 const BodyContainer = styled.div`
   padding: ${props => props.theme.sitePadding};
   max-width: ${props => props.theme.contentWidthLaptop};
   margin: 0 auto;
-`;
+`
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
@@ -86,7 +86,7 @@ export const pageQuery = graphql`
     }
     posts: allMarkdownRemark(
       limit: 2000
-      filter: {frontmatter: {type: {eq: "post"}}}
+      filter: { frontmatter: { type: { eq: "post" } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -106,4 +106,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
