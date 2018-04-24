@@ -68,6 +68,7 @@
     "clean": "rm -rf public",
     "lint:js": "eslint --ext .js,.jsx --ignore-pattern public,static .",
     "lint:md": "remark content/posts/",
+    "lint": "npm run lint:js && npm run lint:md",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format:js": "prettier 'src/**/*.{js,jsx}' --write"
   },
