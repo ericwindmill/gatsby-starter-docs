@@ -13,13 +13,13 @@ class Index extends React.Component {
 
     return (
       <div className="index-container">
-        <Helmet title={config.siteTitle} />
-        <SEO postEdges={allSEOMarkdown} />
+        <Helmet title={config.siteTitle}/>
+        <SEO postEdges={allSEOMarkdown}/>
         <main>
           <IndexHeadContainer>
-            <Navigation />
+            <Navigation/>
             <Hero>
-              <img src={config.siteLogo} width="150px" alt="" />
+              <img src={config.siteLogo} width="150px" alt=""/>
               <h1>{config.siteTitle}</h1>
               <h4>{config.siteDescription}</h4>
             </Hero>
@@ -31,6 +31,14 @@ class Index extends React.Component {
               automatically generated from markdown files.{' '}
             </p>
             <CtaButton to={'/lesson-one'}>See Your First Post</CtaButton>
+
+            <div className="contributors">
+              <p>Created by Eric Windmill. <a
+                href="https:twitter.com/ericwindmill">You should follow him on
+                Twitter.</a> Also, <a href="https://github.com/Levino">Levin
+                Keller</a> for
+                making it better than I could've alone.</p>
+            </div>
           </BodyContainer>
         </main>
       </div>
@@ -44,6 +52,7 @@ const IndexHeadContainer = styled.div`
   background: ${props => props.theme.brand};
   padding: ${props => props.theme.sitePadding};
   text-align: center;
+  
 `
 
 const Hero = styled.div`
@@ -57,6 +66,11 @@ const BodyContainer = styled.div`
   padding: ${props => props.theme.sitePadding};
   max-width: ${props => props.theme.contentWidthLaptop};
   margin: 0 auto;
+  
+  .contributors {
+    max-width: 400px;
+    margin: 100px auto 0;
+  }
 `
 
 /* eslint no-undef: "off" */

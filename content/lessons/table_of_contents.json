@@ -2,10 +2,10 @@
   "id": "table-of-contents",
   "chapters": [
     {
-      "title": "First main chapter",
+      "title": "1. Main Chapter",
       "chapters": [
         {
-          "title": "First subchapter of first main chapter",
+          "title": "1.1 Subchapter",
           "entries": [
             {
               "entry": "./lesson_one.md"
@@ -13,7 +13,7 @@
           ],
           "chapters": [
             {
-              "title": "First subchapter in first subchapter of first main chapter",
+              "title": "1.1.1 Sub-subchapter",
               "entries": [
                 {
                   "entry": "./lesson_two.md"
@@ -22,10 +22,11 @@
                   "entry": "./lesson_three.md"
                 }
               ]
-            }]
+            }
+          ]
         },
         {
-          "title": "Second subchapter of main chapter",
+          "title": "1.2 Subchapter",
           "entries": [
             {
               "entry": "./lesson_four.md"
@@ -35,10 +36,10 @@
       ]
     },
     {
-      "title": "Second main chapter",
+      "title": "2. Main Chapter",
       "chapters": [
         {
-          "title": "First subchapter of second main chapter",
+          "title": "2.1 Subchapter",
           "entries": [
             {
               "entry": "./lesson_five.md"
@@ -48,7 +49,7 @@
       ]
     },
     {
-      "title": "Third main chapter",
+      "title": "3. Main Chapter",
       "entries": [
         {
           "entry": "./lesson_six.md"
