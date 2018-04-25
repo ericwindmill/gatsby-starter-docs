@@ -77,7 +77,7 @@ const EntryListItem = styled.li`
 `
 
 const ChapterTitle = styled.h5`
-  font: ${({ level }) => {
+  font-weight: ${({ level }) => {
     switch (level % 3) {
       case 1:
         return '600'
@@ -92,7 +92,7 @@ const ChapterTitle = styled.h5`
       case 1:
         return '2.2rem'
       case 2:
-        return '2rem'
+        return '1.8rem'
       default:
         return '2.8rem'
     }
@@ -102,7 +102,7 @@ const ChapterTitle = styled.h5`
       case 1:
         return 'black'
       case 2:
-        return 'black'
+        return theme.accent
       default:
         return theme.brand
     }
