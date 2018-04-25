@@ -39,7 +39,7 @@ class Index extends React.Component {
                   You should follow him on Twitter.
                 </a>{' '}
                 Also, <a href="https://github.com/Levino">Levin Keller</a> for
-                making it better than I could've alone.
+                making it better than I could{"'"}ve alone.
               </p>
             </div>
           </BodyContainer>
