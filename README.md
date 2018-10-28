@@ -23,7 +23,7 @@ Updated 3/17/18
    * The GraphQl query in your 'lesson' template should match your table_of_contents.
    * The `TableOfContents` component does the rest.
 
-This requires more upfront work, but I've found it to be infintely better when your page count gets high. It's easier to move things around and have the ToC **just work**.
+This requires more upfront work, but I've found it to be infinitely better when your page count gets high. It's easier to move things around and have the ToC **just work**.
 
 For a more complicated example, you can look at the repo for the site I built this for: [Flutter By Example](https://github.com/ericwindmill/flutter-by-example-www)/
    
