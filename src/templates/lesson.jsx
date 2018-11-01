@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
 
 import SEO from '../components/SEO'
 import SiteHeader from '../components/Layout/Header'
@@ -9,7 +10,7 @@ import TableOfContents from '../components/Layout/TableOfContents'
 
 export default class LessonTemplate extends React.Component {
   render() {
-    const { slug } = this.props.pathContext
+    const { slug } = this.props.pageContext
     const postNode = this.props.data.postBySlug
     const post = postNode.frontmatter
     if (!post.id) {

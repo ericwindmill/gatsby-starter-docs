@@ -1,50 +1,56 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
 
 import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 import CtaButton from '../components/CtaButton'
 import Navigation from '../components/Layout/Navigation'
+import Layout from '../components/Layout'
 
 class Index extends React.Component {
   render() {
     const allSEOMarkdown = this.props.data.allMarkdown.edges
 
     return (
-      <div className="index-container">
-        <Helmet title={config.siteTitle} />
-        <SEO postEdges={allSEOMarkdown} />
-        <main>
-          <IndexHeadContainer>
-            <Navigation />
-            <Hero>
-              <img src={config.siteLogo} width="150px" alt="" />
-              <h1>{config.siteTitle}</h1>
-              <h4>{config.siteDescription}</h4>
-            </Hero>
-          </IndexHeadContainer>
-          <BodyContainer>
-            <h2>A Gatsby Template for Content</h2>
-            <p>
-              Made for modern documentation sites. Table of Contents
-              automatically generated from markdown files.{' '}
-            </p>
-            <CtaButton to={'/lesson-one'}>See Your First Post</CtaButton>
-
-            <div className="contributors">
+      <Layout location={this.props.location}>
+        <div className="index-container">
+          <Helmet title={config.siteTitle} />
+          <SEO postEdges={allSEOMarkdown} />
+          <main>
+            <IndexHeadContainer>
+              <Navigation />
+              <Hero>
+                <img src={config.siteLogo} width="150px" alt="" />
+                <h1>{config.siteTitle}</h1>
+                <h4>{config.siteDescription}</h4>
+              </Hero>
+            </IndexHeadContainer>
+            <BodyContainer>
+              <h2>A Gatsby Template for Content</h2>
               <p>
-                Created by Eric Windmill.{' '}
-                <a href="https:twitter.com/ericwindmill">
-                  You should follow him on Twitter.
-                </a>{' '}
-                Also, <a href="https://github.com/Levino">Levin Keller</a> for
-                making it better than I could{"'"}ve alone.
+                Made for modern documentation sites. Table of Contents
+                automatically generated from markdown files.{' '}
               </p>
-            </div>
-          </BodyContainer>
-        </main>
-      </div>
+              <CtaButton to={'/lesson-one'}>See Your First Post</CtaButton>
+
+              <div className="contributors">
+                <p>
+                  Created by Eric Windmill.{' '}
+                  <a href="https:twitter.com/ericwindmill">
+                    You should follow him on Twitter.
+                  </a>{' '}
+                  Also, <a href="https://github.com/Levino">Levin Keller</a> for
+                  making it better than I could
+                  {"'"}
+                  ve alone.
+                </p>
+              </div>
+            </BodyContainer>
+          </main>
+        </div>
+      </Layout>
     )
   }
 }

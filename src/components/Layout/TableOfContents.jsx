@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 /* eslint react/no-array-index-key: "off" */
@@ -35,7 +35,9 @@ const ChapterList = ({ chapters, entries, title, level = 0 }) => (
 
 const TableOfContents = ({ chapters }) => (
   <TOCWrapper>
-    {chapters.map((chapter, index) => <ChapterList {...chapter} key={index} />)}
+    {chapters.map((chapter, index) => (
+      <ChapterList {...chapter} key={index} />
+    ))}
   </TOCWrapper>
 )
 

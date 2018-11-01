@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
 
 import UserInfo from '../components/UserInfo'
 import Disqus from '../components/Disqus/Disqus'
@@ -13,7 +14,7 @@ import SiteHeader from '../components/Layout/Header'
 
 export default class PostTemplate extends React.Component {
   render() {
-    const { slug } = this.props.pathContext
+    const { slug } = this.props.pageContext
     const postNode = this.props.data.markdownRemark
     const post = postNode.frontmatter
     if (!post.id) {
