@@ -123,7 +123,7 @@ module.exports = {
         feeds: [
           {
             serialize(ctx) {
-              const { rssMetadata } = ctx.query.site.siteMetadata
+              const rssMetadata = ctx.query.site.siteMetadata.rssMetadata
               return ctx.query.allMarkdownRemark.edges.map(edge => ({
                 categories: edge.node.frontmatter.tags,
                 date: edge.node.frontmatter.date,
