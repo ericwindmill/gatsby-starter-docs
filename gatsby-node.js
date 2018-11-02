@@ -1,6 +1,6 @@
 const path = require('path')
 const _ = require('lodash')
-const webpackLodashPlugin = require('lodash-webpack-plugin')
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -111,8 +111,8 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
+exports.onCreateWebpackConfig = ({ actions, stage }) => {
   if (stage === 'build-javascript') {
-    config.plugin('Lodash', webpackLodashPlugin, null)
+    actions.setWebpackConfig({ plugins: [new LodashModuleReplacementPlugin()] })
   }
 }

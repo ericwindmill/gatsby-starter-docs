@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { FaGithubAlt, FaTwitter } from 'react-icons/lib/fa'
-import { MdMessage, MdEmail } from 'react-icons/lib/md'
+import { FaGithubAlt, FaTwitter } from 'react-icons/fa'
+import { MdMessage, MdEmail } from 'react-icons/md'
 import styled from 'styled-components'
 
 const Container = styled.div`

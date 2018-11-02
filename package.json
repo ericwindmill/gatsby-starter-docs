@@ -1,7 +1,6 @@
 {
   "name": "gatsby-docs-starter",
-  "description":
-    "GatsbyJS starter designed with documentation and tutorial websites in mind.",
+  "description": "GatsbyJS starter designed with documentation and tutorial websites in mind.",
   "version": "1.0.1",
   "author": "Eric Windmill <eric@ericwindmill.com>",
   "dependencies": {
@@ -29,6 +28,7 @@
     "gatsby-transformer-remark": "^2.1.11",
     "lodash": "^4.17.11",
     "lodash-webpack-plugin": "^0.11.5",
+    "prismjs": "^1.15.0",
     "react": "^16.6.0",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.6.0",
@@ -39,6 +39,7 @@
     "styled-components": "^4.0.3"
   },
   "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "cli-glob": "^0.1.0",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -53,7 +54,9 @@
     "stylefmt": "^6.0.3",
     "write-good": "^0.13.1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -64,8 +67,7 @@
     "build:pp": "gatsby build --prefix-paths",
     "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
     "clean": "rm -rf public",
-    "lint:js":
-      "eslint --ext .js,.jsx --ignore-pattern public,static . && npm run prettier -- --list-different",
+    "lint:js": "eslint --ext .js,.jsx --ignore-pattern public,static . && npm run prettier -- --list-different",
     "lint:md": "remark content/posts/",
     "lint": "npm run lint:js && npm run lint:md",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
@@ -73,6 +75,8 @@
     "format:js": "npm run prettier -- --write"
   },
   "remarkConfig": {
-    "plugins": ["remark-preset-lint-recommended"]
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
   }
 }
