@@ -44,7 +44,10 @@ module.exports = {
             }
           },
           {
-            resolve: 'gatsby-remark-responsive-iframe'
+            resolve: 'gatsby-remark-responsive-iframe',
+            options: {
+              plugins: [`gatsby-remark-responsive-iframe`]
+            }
           },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
