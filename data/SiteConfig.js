@@ -6,7 +6,7 @@ module.exports = {
   siteLogo: '/logos/logo-1024.png', // Logo used for SEO and manifest.
   siteUrl: 'https://ericwindmill.com', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: 'A GatsbyJS stater for creating Documentation or Tutorials.', // Website description used for RSS feeds/meta description tag.
+  siteDescription: 'A GatsbyJS starter for creating Documentation or Tutorials.', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
   siteFBAppID: '1825356251115265', // FB Application ID for using app insights
   googleAnalyticsID: 'UA-82450300-1 ', // GA tracking ID.
